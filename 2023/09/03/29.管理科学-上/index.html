@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>管理科学-上 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="有8口海上油井，相互间距离如下表所示（单位：海里）。其中1号井离海岸最短长度，为5海里，先要从海岸经1号井铺设油管将各井连接起来，则铺设输油管道的最短长度（）海里。   9.1  9.2  10.1  10.2    最小生成树    如图所示，有一批货物要从城市S发送到T，线条上数字代表通过这条路的费用（单位为万元）。那么运送这批货物，至少需要花费多少元？81万元   最短路径  先算S到1的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="管理科学-上">
+<meta property="og:url" content="http://example.com/2023/09/03/29.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8A/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="有8口海上油井，相互间距离如下表所示（单位：海里）。其中1号井离海岸最短长度，为5海里，先要从海岸经1号井铺设油管将各井连接起来，则铺设输油管道的最短长度（）海里。   9.1  9.2  10.1  10.2    最小生成树    如图所示，有一批货物要从城市S发送到T，线条上数字代表通过这条路的费用（单位为万元）。那么运送这批货物，至少需要花费多少元？81万元   最短路径  先算S到1的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124697.jpg">
+<meta property="article:published_time" content="2023-09-03T01:59:52.000Z">
+<meta property="article:modified_time" content="2023-09-09T08:00:57.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="知识小结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124697.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/09/03/29.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8A/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '管理科学-上',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124697.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">管理科学-上</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">管理科学-上</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-03T01:59:52.000Z" title="发表于 2023-09-03 09:59:52">2023-09-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-09T08:00:57.000Z" title="更新于 2023-09-09 16:00:57">2023-09-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A7/">软考高级</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ol>
+<li><p>有8口海上油井，相互间距离如下表所示（单位：海里）。其中1号井离海岸最短长度，为5海里，先要从海岸经1号井铺设油管将各井连接起来，则铺设输油管道的最短长度（）海里。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 9.1</li>
+<li><input disabled="" type="checkbox"> 9.2</li>
+<li><input disabled="" type="checkbox"> 10.1</li>
+<li><input checked="" disabled="" type="checkbox"> 10.2</li>
+</ul>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301058228.png" alt="image-20230830105824104"></p>
+<blockquote>
+<p><strong>最小生成树</strong></p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301541894.png" alt="image-20230830154101750"></p>
+</blockquote>
+</li>
+<li><p>如图所示，有一批货物要从城市S发送到T，线条上数字代表通过这条路的费用（单位为万元）。那么运送这批货物，至少需要花费多少元？<strong>81万元</strong></p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301545141.png" alt="image-20230830154527103"></p>
+<blockquote>
+<p><strong>最短路径</strong></p>
+<ol>
+<li>先算S到1的最小距离，<ol>
+<li>列举S到1的距离，S1&#x3D;&#x3D;25;S21&#x3D;&#x3D;41，</li>
+<li>选最小25，写到1上</li>
+</ol>
+</li>
+<li>再算2,3一次得出，有多条的  先随便选一条</li>
+</ol>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301735015.png" alt="image-20230830173546949"></p>
+</blockquote>
+</li>
+<li><p>下图中标出了某地区的运输网，各节点之间的运输能力，那么，请节点1到节点6最大运输能力（流量）可以达到多少万吨&#x2F;小时。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 23万吨</li>
+</ul>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301739271.png" alt="image-20230830173900232"></p>
+<blockquote>
+<p>解析：</p>
+<p><strong>网络与最大流量</strong></p>
+<ul>
+<li><p>列出1256，最大运输能力6，画图</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301746361.png" alt="image-20230830174618294"></p>
+</li>
+<li><p>列出1356，最大运输能力10，画图</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301747428.png" alt="image-20230830174703345"></p>
+</li>
+<li><p>列出156，最大运输能力5，画图</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301748631.png" alt="image-20230830174847556"></p>
+</li>
+<li><p>列出14356，最大运输能力1，画图</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301749387.png" alt="image-20230830174936308"></p>
+</li>
+<li><p>列出14256，最大运输能力1，画图</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301750921.png" alt="image-20230830175032851"></p>
+</li>
+<li><p>无路可去，把之前的最大运输能力相加</p>
+<ul>
+<li>6+10+5+1+1&#x3D;23</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>某公司需要根据下一年度宏观经济的增长趋势预测决定投资策略，宏观经济增长趋势有不景气，不变与景气三种，投资策略有积极、稳健和保守三种，各种状态的收益，如下图所示。</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308301755732.png" alt="image-20230830175528697"></p>
+<p>【问题1】根据乐观主义准则的最佳决策是？</p>
+<p>500，所以选择积极。</p>
+<p>【问题2】根据悲观主义准则的最佳决策是？</p>
+<p>200，所以选择保守。</p>
+<p>【问题3】根据后悔值准则的最佳决策是？</p>
+<p>稳健方案。</p>
+<blockquote>
+<p>解析：</p>
+<p><strong>不确定型决策</strong></p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311644006.png" alt="image-20230831164428860"></p>
+<p>因为考虑到收益，所以，取各自眼中最大的。</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311652311.png" alt="image-20230831165256266"></p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311655969.png" alt="image-20230831165541925"></p>
+</blockquote>
+</li>
+<li><p>某工厂在计划期内要安排生产I，II两种产品，已知单位产品所需的设备台数及A、B两种原料消耗，如图所示：</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311659554.png" alt="image-20230831165903516"></p>
+<p>该工厂每生产意见I可获利2元，每生产一件产品II可获利3元，问应该如何安排计划使该工程获利最多。</p>
+<blockquote>
+<p>解析：</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311708174.png" alt="image-20230831170830119"></p>
+</blockquote>
+</li>
+<li><p>某车间需要一台车床铣车加工A、B、C、D四个零件。每个零件都需要先用车床加工，再用铣床加工。车床与铣床加工每个零件所需的工时（包括加工前的准备时间以及加工后的处理时间）如下表：<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311717845.png" alt="image-20230831171736800"></p>
+<p>若以A、B、C、D零件顺序安排加工，则共需32小时。适当调整零件加工顺序，可使所需总工时最短。在这种最短总工时方案中，零件A在车床上的加工顺序安排在第（1）位，四个零件加工共需（2）小时。</p>
+<p>第3位，22个小时。</p>
+<blockquote>
+<p>解析：</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311726904.png" alt="image-20230831172604829"></p>
+</blockquote>
+</li>
+<li><p>载重量限24吨的某货源飞机执行将一批金属原料运往某地的任务。待运输的各箱原料的重量、运输利润如下表所示。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311729029.png" alt="image-20230831172908977"></p>
+<p>经优化安排，该飞机本次运输可以获得的最大利润为（）千元。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 11</li>
+<li><input checked="" disabled="" type="checkbox"> 10</li>
+<li><input disabled="" type="checkbox"> 9</li>
+<li><input disabled="" type="checkbox"> 8</li>
+</ul>
+<blockquote>
+<p>解析：</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308311736498.png" alt="image-20230831173628425"></p>
+</blockquote>
+</li>
+<li><p>一家公司需要确定使用期为5年的一种设备的更换策略。已知各年购买设备的价格和各年龄设备的维修价格如表1和表2所示，最优的设备更换策略中，总费用是（）。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021555169.png" alt="image-20230902155545019"></p>
+<ul>
+<li><input disabled="" type="checkbox"> 50</li>
+<li><input checked="" disabled="" type="checkbox"> 53</li>
+<li><input disabled="" type="checkbox"> 59</li>
+<li><input disabled="" type="checkbox"> 71</li>
+</ul>
+<blockquote>
+<p>解析：</p>
+<p>这个很简单假定1，2，3，4，5年换把费用加下就好。</p>
+<p>第1年购置，用到坏：</p>
+<p>11（购入设备）+5（第1年修）+6（第2年修）+8（第3年修）+11（第4年修）+18（第5年修）&#x3D;59</p>
+<p>第1年购置，第2年换新的用到坏：</p>
+<p>11（购入设备）+5（第1年修）+11（购入设备）+5（第1年修）+6（第2年修）+8（第3年修）+11（第4年修）&#x3D;57</p>
+<p>第1年购置，第3年换新的用到坏：</p>
+<p>11（购入设备）+5（第1年修）+6（第2年修）+12（购入设备）+5（第1年修）+6（第2年修）+8（第3年修）&#x3D;53</p>
+<p>第1年购置，第4年换新的用到坏：</p>
+<p>11（购入设备）+5（第1年修）+6（第2年修）+8（第3年修）+12（购入设备）+5（第1年修）+6（第2年修）&#x3D;53</p>
+<p>第1年购置，第5年换新的用到坏：</p>
+<p>11（购入设备）+5（第1年修）+6（第2年修）+8（第3年修）+13（第4年修）+11（购入设备）+5（第1年修）&#x3D;59</p>
+</blockquote>
+</li>
+<li><p>某公司现有400万元用于投资甲乙丙三个项目，投资额以百万元为单位，已知由乙内三项投资的可能方案及相应获得的收益如下表所示：<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021611723.png" alt="image-20230902161142660"></p>
+<p>则该公司能获取的最大收益是（）百万元。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 17</li>
+<li><input checked="" disabled="" type="checkbox"> 18</li>
+<li><input disabled="" type="checkbox"> 20</li>
+<li><input disabled="" type="checkbox"> 21</li>
+</ul>
+<blockquote>
+<p>解析：</p>
+<p>求最值问题</p>
+<p>也很简单，分三个情况，全投一个的最大产出，全投2个人，3个人都投</p>
+<p>全投1个人：选丙，得15</p>
+<p>全投2个人：有2个组合</p>
+<ul>
+<li>1+3组合，选甲丙4+11&#x3D;15</li>
+<li>2+2组合，选乙丙9+8&#x3D;17</li>
+</ul>
+<p>全投3个人：1+2+1，选甲乙丙4+9+5&#x3D;18</p>
+</blockquote>
+</li>
+<li><p>某项目有I、II、III、IV四项不同任务，恰有甲、乙、丙、下四个人去完成各项不同的任务，由于任务性质及每人的技术水平不同，他们完成各项任务所需时间也不同，具体如下表所示：<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021621072.png" alt="image-20230902162142021"></p>
+<ul>
+<li><input disabled="" type="checkbox"> I</li>
+<li><input disabled="" type="checkbox"> II</li>
+<li><input checked="" disabled="" type="checkbox"> III</li>
+<li><input disabled="" type="checkbox"> IV</li>
+</ul>
+<blockquote>
+<p>解析：</p>
+<p>匈利牙法</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021629977.png" alt="image-20230902162933930"></p>
+<p>减去同行最小的值，找出0值</p>
+<p>一眼确定，乙只能做II，甲I或IV，丙I，下I，II，IV都行</p>
+<p>甲，丁在III  IV求最小值</p>
+<p>得2+4&#x3D;6，故丁在III</p>
+<p>也可以把列上没有0的，也归0.得</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021634869.png" alt="image-20230902163408828"></p>
+<p>选0的就好。</p>
+</blockquote>
+</li>
+<li><p>某航空公司为满虽客运量日益增长的需求，拟购置一批新的远程、中程及短程的喷气式客机。每架远程客机价格670万美元，中程客机500万美元，短程客机350万美元。该公司现有资金12000万美元用于购买飞机。据估计每架远程客机的年净利润为82万美元，中程客机的年净利润为60万美元，短程客机的年利润为40万美元。假设该公司现有的熟练驾驶员可支持30架新购入飞机的飞行任务，维修能力足以满虽新增加40架短程客机的维修要求，而每架中程客机维修量相当于4&#x2F;3架短程客机，每架远程客机维修量相当于5&#x2F;3架短程客机，为获取最大利润，该公司应购买各类客机分别为（）架。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 远程17，中程1，短程0</li>
+<li><input disabled="" type="checkbox"> 远程15，中程1，短程2</li>
+<li><input disabled="" type="checkbox"> 远程12，中程3，短程3</li>
+<li><input disabled="" type="checkbox"> 远程10，中程3，短程3</li>
+</ul>
+<blockquote>
+<p>直接代入下答案会更快</p>
+<p>A：17x82+1x60&#x3D;1454</p>
+<p>B：15x82+1x60+2x40&#x3D;1370</p>
+<p>C：12x82+3x60+3x40&#x3D;1284</p>
+<p>D：10x82+3x60+3x40&#x3D;1120</p>
+<p>记得要看下是不是满足条件：</p>
+<p>1、不超过预算12000</p>
+<p>2、驾驶员不超过30</p>
+<p>3、维修费不超过40</p>
+</blockquote>
+</li>
+<li><p>某部门有3个生产同类产品的工厂（产地），生产的产品由4个销售点（销地）出售，各工厂的生产量（单位：吨）、各销售点的销售量（单位：吨）以及各销售点的单位运价（百元&#x2F;吨）示于表所示：</p>
+<p>适当安排调运方案，最小总运费为（）百元。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021656831.png" alt="image-20230902165628773"></p>
+<ul>
+<li><input disabled="" type="checkbox"> 450</li>
+<li><input disabled="" type="checkbox"> 455</li>
+<li><input checked="" disabled="" type="checkbox"> 460</li>
+<li><input disabled="" type="checkbox"> 465</li>
+</ul>
+<blockquote>
+<p>解析：</p>
+<p>伏格尔法<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309021709814.png" alt="image-20230902170914757"></p>
+<p>所以，第一步：</p>
+<p>A3的最大化满足B2的销售，得到到运费为<strong>28x5&#x3D;140</strong>，此时A3还有44-28&#x3D;16</p>
+<p>再看B4，A3又是最小，把仅剩的16全部给B4，得<strong>16x6&#x3D;96</strong>，但此时B4还有还有8个销售，用A2全部注入，得<strong>8x9&#x3D;72</strong>，此时B4空了，B2也空了，且A2还有12，A1还有32</p>
+<p>再找B1，里面A2最小，A2梭哈<strong>12x2&#x3D;24</strong>，B1销售还有16-12&#x3D;4，A1，注入4，的<strong>4x4&#x3D;16</strong>。</p>
+<p>此时，B1，B2,B3，B4销售没了，A1，只有32-4&#x3D;28</p>
+<p>A1再B3销售，B3刚好28，等<strong>28x4&#x3D;112</strong></p>
+<p>加在一起：112+28+16+24+64+140&#x3D;460</p>
+</blockquote>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/09/03/29.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8A/">http://example.com/2023/09/03/29.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/">知识小结</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124697.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/09/03/30.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8B/" title="管理科学-下"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124667.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">管理科学-下</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/03/12.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8B/" title="项目整合管理-下集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124707.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">项目整合管理-下集</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/10/06/00.%E8%80%83%E5%89%8D%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/" title="必备知识"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124670.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-06</div><div class="info-item-2">必备知识</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/27/10.%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9%E7%AE%A1%E7%90%86/" title="项目立项管理"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124693.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-27</div><div class="info-item-2">项目立项管理</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/" title="项目整合管理-上集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="info-item-2">项目整合管理-上集</div></div><div class="info-2"><div class="info-item-1">  会出现的论文里面 项目整合管理定义：包括识别、定义、组合、统一和协调项目管理过程组的各个过程和项目管理活动。 重要性：整合管理兼具统一、合并、沟通和建立联系的性质，项目整合管理贯穿项目始终。 目标：  资源分配 平衡竟争性需求 研究各种备选方法 裁剪过程以实现项目目标 管理各个项目管理知识领域之间的依赖关系  管理基础执行整合，项目整合管理的责任不能被授权或转移，项目经理必须对整个项目承担最终责任。 整合包括：  过程层面执行整合 认知层面执行整合 背景层面执行整合  整合管理的复杂性项目的复杂性来源于组织的系统行为、人类行为以及组织或环境中的不确定性。 复杂性的含义：  包含多个部分 不同部分之间存在一系列的关联 不同部分之间的动态交互作用 这些义互作用所产生的行为远远大于各部分简单的相加（例如突发性行为）。  项目管理计划和项目文件项目管理过程中，会使用并存产生两大类文件：一是项目管理计划；二是项目文件。...</div></div></div></a><a class="pagination-related" href="/2023/09/03/12.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8B/" title="项目整合管理-下集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124707.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-03</div><div class="info-item-2">项目整合管理-下集</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="范围管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-07</div><div class="info-item-2">范围管理计划</div></div><div class="info-2"><div class="info-item-1"> 范围管理定义：项目范围管理：包括确保项目做且只做所需的全部工作，以成功完成项目。 项目范围管理主要在意定义和控制那些工作应该包括在项目内，那些不应该包含在项目内。 范围管理的基础： 产品范围和项目范围 产品范围 指某项产品、服务或成果所具有的特征和功能。 衡量是否完成，根据产品需求来衡量的。产品需求规格说明书。   项目范围 包括产品范围，是为交付具有规定特征与功能的产品、服务或成果而必须完成的工作。 衡量是否完成，根据项目管理计划来衡量的。     管理新实践  项目范围管理过程 过程概述，6个过程-...</div></div></div></a><a class="pagination-related" href="/2023/09/08/14.%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="进度管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124678.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-08</div><div class="info-item-2">进度管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

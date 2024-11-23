@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>日常模拟错题本 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="中间件是一种独立的系统软件或服务程序，可分为底层中间件、通用型中间件和集成型中间件。以下（）不属于通用型中间件。   CORBA  JDBC  J2EE  COM   底层型中间件的主流技术有：JVM、CLR、ACE、JDBC、ODBC等 通用型中间件的主流技术有：CORBA、J2EE、MOM、COM等 集成性中间件的主流技术有：WorkFlow和EAI等。   ICMP协议位于（）。   网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常模拟错题本">
+<meta property="og:url" content="http://example.com/2023/09/21/%E6%97%A5%E5%B8%B8%E6%A8%A1%E6%8B%9F%E9%94%99%E9%A2%98%E6%9C%AC/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="中间件是一种独立的系统软件或服务程序，可分为底层中间件、通用型中间件和集成型中间件。以下（）不属于通用型中间件。   CORBA  JDBC  J2EE  COM   底层型中间件的主流技术有：JVM、CLR、ACE、JDBC、ODBC等 通用型中间件的主流技术有：CORBA、J2EE、MOM、COM等 集成性中间件的主流技术有：WorkFlow和EAI等。   ICMP协议位于（）。   网络">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122193.jpg">
+<meta property="article:published_time" content="2023-09-21T06:45:57.000Z">
+<meta property="article:modified_time" content="2023-09-21T08:39:11.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="每日模拟">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122193.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/09/21/%E6%97%A5%E5%B8%B8%E6%A8%A1%E6%8B%9F%E9%94%99%E9%A2%98%E6%9C%AC/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '日常模拟错题本',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122193.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">日常模拟错题本</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">日常模拟错题本</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-21T06:45:57.000Z" title="发表于 2023-09-21 14:45:57">2023-09-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-21T08:39:11.000Z" title="更新于 2023-09-21 16:39:11">2023-09-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ol>
+<li><p>中间件是一种独立的系统软件或服务程序，可分为底层中间件、通用型中间件和集成型中间件。以下（）不属于通用型中间件。</p>
+<ul>
+<li><input disabled="" type="checkbox"> CORBA</li>
+<li><input checked="" disabled="" type="checkbox"> JDBC</li>
+<li><input disabled="" type="checkbox"> J2EE</li>
+<li><input disabled="" type="checkbox"> COM</li>
+</ul>
+<blockquote>
+<p>底层型中间件的主流技术有：JVM、CLR、ACE、JDBC、ODBC等</p>
+<p>通用型中间件的主流技术有：CORBA、J2EE、MOM、COM等</p>
+<p>集成性中间件的主流技术有：WorkFlow和EAI等。</p>
+</blockquote>
+</li>
+<li><p>ICMP协议位于（）。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 网络层</li>
+<li><input disabled="" type="checkbox"> 传输层</li>
+<li><input disabled="" type="checkbox"> 应用层</li>
+<li><input disabled="" type="checkbox"> 数据链路层</li>
+</ul>
+<blockquote>
+<p>OSI七层模型常见协议<br>应用层：HTTP、Telnet、FTP、SMTP、TFTP、DHCP、DNS<br>表示层：JPEG、ASCI、GIF、DES、MQEG<br>会话层：RPC、SQL、NFS<br>传输层：TCP、UDP、SPX<br>网络层：ARP、RARP、IP、ICMP、IGMP<br>数据链路层：PPTP、L2TP、SLIP、PPP、ATM、HDLC、802.3、802.11<br>物理层：RS232、V.35、RJ-45、FDDI</p>
+</blockquote>
+</li>
+<li><p>对信息系统测试的监控主要包括（）。</p>
+<ol>
+<li>软件测试模型的定义</li>
+<li>测试用例执行的进度</li>
+<li>缺陷的存活时间</li>
+<li>缺陷的趋势分析</li>
+<li>缺陷的分布密度</li>
+<li>缺陷的修改质量</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> 13456</li>
+<li><input disabled="" type="checkbox"> 12345</li>
+<li><input disabled="" type="checkbox"> 12346</li>
+<li><input checked="" disabled="" type="checkbox"> 23456</li>
+</ul>
+<blockquote>
+<p>测试监控的内容如下。<br>（1）测试用例执行的进度。<br>（2）缺陷的存活时间。<br>（3）缺陷的趋势分析。<br>（4）缺陷分布密度。<br>（5）缺陷修改质量。</p>
+</blockquote>
+</li>
+<li><p>5G网络中，实现端到端业务质量保障的是哪种技术？</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 网络切片</li>
+<li><input disabled="" type="checkbox"> 毫米波技术</li>
+<li><input disabled="" type="checkbox"> 边缘计算</li>
+<li><input disabled="" type="checkbox"> 大连接</li>
+</ul>
+<blockquote>
+<p>5G网络中，实现端到端业务质量保障是网络切片技术。网络切片是一种按需组网的方式，可以让运营商在统一的基础设施上分离出多个虚拟的端到端网络，每个网络切片从无线接入网到承载网再到核心网上进行逻辑阻隔，以适配各种各样类型的应用。</p>
+</blockquote>
+</li>
+<li><p>企业能够将软件管理和工程两方面的过程文档化，标准化，并综合成该组织的标准软件过程。所有项目均使用经批准剪裁软件过程来开发和维护软件，软件产品的生产在整个软件过程是可见的，由此判断，该企业达到了CMMl（）级。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 2</li>
+<li><input checked="" disabled="" type="checkbox"> 3</li>
+<li><input disabled="" type="checkbox"> 4</li>
+<li><input disabled="" type="checkbox"> 5</li>
+</ul>
+<blockquote>
+<p>1.能力等级0级：不完整级<br>不完整的过程是没有得到执行或部分得到执行的过程。过程域的一个或多个特定目标没有得到满足，并且该等级下通用目标也不具备，这是因为没有理由对一个部分执行的过程进行制度化。<br>2.能力等级1级：已执行级<br>能力等级1级的过程被描述为已执行的过程。已执行的过程是完成所需工作而产生工作产品的过程：过程域的特定目标得到满足。尽管能力等级1级会取得重要改进，但如果未得到制度化，那些改进经过一段时间后可能会丢失。<br>利用制度化（CMMI能力等级2级与3级的通用实践）有助于确保改进得以保持。<br>3.能力等级2级：已管理级<br>能力等级2级的过程被描述为已管理的过程。已管理的过程是一种已执行的过程，这种过程按照方针得到计划和执行；雇用有技能的人，具备充分的资源以产生受控的输出：使相关干系人参与其中；得到监督、控制与评审；并且对其过程描述的遵守程度得到评价。<br>4.能力等级3级：已定义级<br>能力等级3级的过程被描述为已定义的过程。已定义的过程是一种已管理的过程，这种过程按照组织的裁剪指南，从组织的标准过程集中裁剪得到；它具有受维护的过程描述，并且将过程相关经验贡献给组织级过程资产。</p>
+</blockquote>
+</li>
+<li><p>在完成一项任务之后，项目团队成员希望将他们实际所花费的时间与该任务的计划持续时间进行对比。为此，团队成员应参考工作分解结构（WBS）中的下列哪一项？（）</p>
+<ul>
+<li><input disabled="" type="checkbox"> 工作包</li>
+<li><input disabled="" type="checkbox"> 任务</li>
+<li><input checked="" disabled="" type="checkbox"> 控制账户</li>
+<li><input disabled="" type="checkbox"> 可交付成果</li>
+</ul>
+<blockquote>
+<p>1.里程碑：在每个分解单元中都存在可交付成果和里程碑，里程碑标志着某个可交付成果或者阶段的正式完成。里程碑和可交付成果紧密联系在一起，但并不是一个事物。可交付成果可能包括报告、原型、成果和最终产品，而里程碑则关注于是否完成。<br>2.工作包：工作包是位于WBS每条分支最底层的可交付成果或项目工作组成部分。由于工作包应便于完整地分派给不同的人或组织单元，所以要求明确各工作单元直接的界面。工作包应该非常具体，以便承担者能明确自己的任务、努力的目标和承担的责任。工作包是基层任务或工作的指派，同时具有检测和报告工作的作用。所有工作包的描述必然让成本会计管理者和项目监管人员理解，并能够清楚地区分不同工作包的工作。<br>3.控制账户：控制账户是一种管理控制点，在该控制点上，将范围、预算（资源计划）、实际成本和进度加以整合，并将它们与挣值进行比较，以测量绩效。将实际所花费的时间与任务的计划持续时间进行对比，需参考控制账户。<br>4.规划包：规划包是指在控制账户之下，工作内容已知但尚缺详细进度活动的WBS组成部分。<br>5.WBS词典：在制作WBS的过程中，要给WBS的每个部分赋予一个账户编码标志符，它们是成本、进度和资源使用信息汇总的层次结构。需要生成一些配套的文件，这些文件需要和WBS配套使用，称为WBS词典。</p>
+</blockquote>
+</li>
+<li><p>如果你是某项目的项目经理，你已经估算出每个模块的成本是￥129。这个项目一共有1200模块，你采用什么估算方法？</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 自下而上估算法</li>
+<li><input disabled="" type="checkbox"> 类比估算法</li>
+<li><input disabled="" type="checkbox"> 专家估算法</li>
+<li><input disabled="" type="checkbox"> 参数估算法</li>
+</ul>
+<blockquote>
+<p>自下而上估算：先对单个工作包或活动的成本进行估算，然后汇总到更高层次。</p>
+<p>类比估算：以过去类似项目的参数值为基础，来估算未来项目的同类参数或指标</p>
+<p>专家判断：根据专家以往的经验进行判断。其中Delphi法称为“背靠背”的专家判断法，通过多轮匿名估算并调整，最终取得较为统一的结论。<br>参数估算：利用历史数据与其他变量（如代码行）之间的统计关系，来估算诸如成本、预算和持续时间等活动参数。参数估算的准确性取决于参数模型的成熟度和基础数据的可靠性。</p>
+</blockquote>
+</li>
+<li><p>以下关于团队建设的说法不正确的是（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 建设项目团队目标之一是提高团队成员的知识和技能，以提高他们完成可交付成果的能力，并降低成本、缩短工期和提高质量</li>
+<li><input disabled="" type="checkbox"> 认识评测工具是建设项目团队的重要工具</li>
+<li><input checked="" disabled="" type="checkbox"> 团队成员之间相互依靠，平稳高效地解决问题是团队进入规范阶段的显著特征</li>
+<li><input disabled="" type="checkbox"> 专家权力来源于个人专业技能，而参照权力更多的来源于人格魅力</li>
+</ul>
+<blockquote>
+<p>在建设项目团队时，项目团队需要经历5个阶段。<br>形成阶段：在本阶段，团队成员相互认识，并了解项目情况以及他们在项目中的正式角色与职责。团队成员倾向于相互独立，不怎么开诚布公。<br>震荡阶段：在本阶段中，团队开始从事项目工作，制定技术决策和讨论项目管理方法。如果团队成员对不同观点和意见不能采取合作和开放的态度，团队环境可能恶化成破坏性的。<br>规范阶段：在规范阶段，团队成员开始协同工作，并按团队的需要来调整各自的工作习惯和行为，团队成员开始相互信任。<br>发挥阶段：进入这一阶段后，团队就像一个组织有序的单位那样工作。团队成员之间相互依靠，平稳高效地解决问题。<br>结束阶段：在结束期阶段，团队完成所有工作，团队成员离开项目。</p>
+</blockquote>
+</li>
+<li><p>项目经理在公司OA系统中发布软件开发标准2.0，要求本公司所有项目组查阅并严格执行该标准。这种共享信息的方式属于（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 面对面沟通</li>
+<li><input disabled="" type="checkbox"> 交互式沟通</li>
+<li><input disabled="" type="checkbox"> 推式沟通</li>
+<li><input checked="" disabled="" type="checkbox"> 拉式沟通</li>
+</ul>
+<blockquote>
+<ul>
+<li>交互式沟通。在两方或多方之间进行多向信息交换。这是确保全体参与者对特定话题达成共识的最有效的方法，包括会议、电话、即时通信、视频会议等。</li>
+<li>推式沟通。把信息发送给需要接收这些信息的特定接收方。这种方法可以确保信息的发送，但不能确保信息送达受众或被目标受众理解。推式沟通包括信件、备忘录、报告、电子邮件、传真、语音邮件、日志、新闻稿等。</li>
+<li>拉式沟通。用于信息量很大或受众很多的情况。要求接收者自主自行地访问信息内容。这种方法包括企业内网、电子在线课程、经验教训数据库、知识库等。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>以下选项中，（）是管理沟通的作用。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 识别和记录与干系人的最有效率且最有效果的沟通方式</li>
+<li><input disabled="" type="checkbox"> 帮助项目经理提升来自干系人的支持</li>
+<li><input disabled="" type="checkbox"> 随时确保所有的沟通参与者之间的信息流动的最优化</li>
+<li><input checked="" disabled="" type="checkbox"> 促进干系人之间实现有效率且有效果的沟通</li>
+</ul>
+<blockquote>
+<p>规划沟通的作用：识别和记录与干系人的最有效率且最有效果的沟通方式</p>
+<p>管理沟通的作用：促进干系人之间实现有效率且有效果的沟通</p>
+<p>控制沟通的作用：随时确保所有的沟通参与者之间的信息流动的最优化</p>
+<p>管理干系人的作用：帮助项目经理提升来自干系人的支持，并把干系人的抵制降到最低，从而显蓄提高项目成功的机会</p>
+</blockquote>
+</li>
+<li><p>配置管理的日常管理活动主要包括：制订配置管理计划、配置项识别、配置项控制、配置状态报告和（）。配置管理回顾与改进等。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 配置审计</li>
+<li><input disabled="" type="checkbox"> 配置变更</li>
+<li><input disabled="" type="checkbox"> 配置项重新定义</li>
+<li><input disabled="" type="checkbox"> 配置管理</li>
+</ul>
+<blockquote>
+<p>配置管理的日常管理活动主要包括：制订配置管理计划、配置项识别、配置项控制、配置状态报告、配置审计、配置管理回顾与改进等。</p>
+</blockquote>
+</li>
+<li><p>以下不属于业务流程分析方法的是（）</p>
+<ul>
+<li><input disabled="" type="checkbox"> 价值链分析法</li>
+<li><input disabled="" type="checkbox"> 供应链分析法</li>
+<li><input disabled="" type="checkbox"> 业务流程重构</li>
+<li><input checked="" disabled="" type="checkbox"> 层次分析法</li>
+</ul>
+<blockquote>
+<p>业务流程分析的主要方法有价值链分析法、客户关系分析法、供应链分析法、基于ERP的分析法和业务流程重构等</p>
+</blockquote>
+</li>
+<li><p>合同履行费用的负担不明确的，由（）分担。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 履行义务的乙方</li>
+<li><input disabled="" type="checkbox"> 接受履行的乙方</li>
+<li><input disabled="" type="checkbox"> 合同双方当事人</li>
+<li><input disabled="" type="checkbox"> 协商确定</li>
+</ul>
+<blockquote>
+<p>本题考查合同履行。<br>当事人就有关合同内容约定不明确的，适用下列规定：<br>1、质量要求不明确的，按照国家标准、行业标准履行；没有国家标准、行业标准的，按照通常标准或者符合合同目的的特定标准履行。<br>2、价款或者报酬不明确的，按照订立合同时履行地的市场价格履行；依法应当执行政府定价或者政府指导价的，按照规定履行。<br>3、履行地点不明确，给付货币的，在接受货币一方所在地履行；交付不动产的，在不动产所在地履行；其他标的，在履行义务一方所在地履行。<br>4、履行期限不明确的，债务人可以随时履行，债权人也可以随时要求履行，但应当给对方必要的准备时间。<br>5、履行方式不明确的，按照有利于实现合同目的的方式履行。<br>6、履行费用的负担不明确的，由履行义务一方负担。<br>综上所述，本题参考答案为A选项。</p>
+</blockquote>
+</li>
+<li><p>成本加激励费合同（CPIF）：合同付款在成本的基础上叠加激励费，激励费通常以实际成本与预期成本之间的差异计量。<br>举例：合同的目标成本30万，目标费用3万，风险分担比率60：40。如果发生为情况A：实际成本28万；情况B：实际成本34万。<br>求乙方应得到的报酬和乙方的利润（）</p>
+<ul>
+<li><input disabled="" type="checkbox"> A情况：31、3；B情况：34、3</li>
+<li><input disabled="" type="checkbox"> A情况：32.2、4.2；B情况：34.6、0.6</li>
+<li><input checked="" disabled="" type="checkbox"> A情况：31.8、3.8；B情况：35.4、1.4</li>
+<li><input disabled="" type="checkbox"> A情况：28.8、0.8；B情况：32.4、-1.6</li>
+</ul>
+<blockquote>
+<p>A项目乙方应得到的报酬：30+3-（30-28）<em>60%&#x3D;31.8万A项目乙方的利润：31.8-28&#x3D;3.8<br>B项目乙方应得到的报酬：30+3+（34-30）</em>60%&#x3D;35.4万B项目乙方的利润：35.4-34&#x3D;1.4</p>
+</blockquote>
+</li>
+<li><p>运行流程以战略流程为导向，以战略流程确定的架构为基础展开，它的逻辑顺序是（）。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 战略&gt;商业模式&gt;运行流程</li>
+<li><input disabled="" type="checkbox"> 商业模式&gt;战略&gt;运行流程</li>
+<li><input disabled="" type="checkbox"> 运行流程&gt;商业模式&gt;战略</li>
+<li><input disabled="" type="checkbox"> 战略&gt;运行流程&gt;商业模式</li>
+</ul>
+</li>
+<li><p>绩效信息的记录和收集有多种方法，但不包括（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 观察法</li>
+<li><input disabled="" type="checkbox"> 工作记录法</li>
+<li><input checked="" disabled="" type="checkbox"> 网络收集法</li>
+<li><input disabled="" type="checkbox"> 他人反馈法</li>
+</ul>
+<blockquote>
+<p>本题考查绩效实施，参考《信息系统项目管理师教程》（第4版）第22.2.2小节，P649。</p>
+<p>绩效信息的记录是指以组织管理者为主体将有关员工绩效的行为记录下来，而收集则是由组织管理者通过他人的观察或记录获得有关员工绩效的信息。记录和收集绩效信息的目的是为在绩效评估及绩效改进时提供事实依据，在绩效实施中及时发现问题和掌握获得优秀绩效的原因，及在争议仲裁中获得利益保护。</p>
+<p>记录和收集绩效信息的方法包括观察法、工作记录法、他人反馈法。</p>
+</blockquote>
+</li>
+<li><p>绩效评估是绩效治理各环节中技术性最强的，包括6个因素，这6个因素为（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 被评估者、评估者、评估时间和周期、评价目标、评定范围、绩效评估数据收集</li>
+<li><input checked="" disabled="" type="checkbox"> 被评估者、评估者、评估时间和周期、评价指标、评定形式、绩效评估数据收集</li>
+<li><input disabled="" type="checkbox"> 被评估者、评估者、评估时间和周期、评价指标、评定范围、绩效评估数据收集</li>
+<li><input disabled="" type="checkbox"> 被评估者、评估者、评估时间和范围、评价指标、评定形式、绩效评估数据收集</li>
+</ul>
+<blockquote>
+<p>绩效评估是绩效治理各环节中技术性最强的，包括6个因素:<strong>被评估者、评估者、评估时间和周期、评价指标、评定形式、绩效评估数据的收集。</strong><br>(1)被评估者。被评估者是指被评定的对象，可以是个人，也可以是团队。当工作作为一个整体，不适合再细分到个人时，比起对个人进行评估，评估团队的工作成效是更好的选择。<br>(2)评估者。评估者是指接受评估的主体，也可以是个人或团队对被评估者进行评估。常见的评估形式有上级对下级或下级对上级的评估、同事间评估、自我评价、360度考核、专家评估、委员会评估等形式。<br>(3)评估时间和周期。评估时间和周期是指在什么时间点评估，多长时间评估一次。一般有日评估、月度评估、季度评估、半年度评估、年度评估、项目制评估、工程制评估等。其中，项目制和工程制评估是以一个项目或工程的开始至结束作为一个考核周期。<br>(4)评价指标。评价指标是通过对组织中长期目标的细化分解出使用目标的情境，再设计出呈现情境的方式和获取记录的方式，最后设定评价时使用的计分单位。<br>(5)评定形式。评定形式是指具体以什么方式来评定工作表现，形式较为多样，一般从定性和定量两种维度进行评定。常见的评定形式主要有关键绩效指标评估、目标管理评估、平衡计分卡法、全方位(360度)绩效评估反馈制度、主管述职评价等。<br>(6)绩效评估数据的收集。绩效评估数据的收集是指收集用于绩效评估的数据，这是绩效评估的基础，没有数据就无法进行绩效评估。在数据收集的过程中，有几点需要注意:取得数据的途径需要合法、客观;各部门数据统计的口径、标准、方法及数据来源须保持一致;数据收集时需要确认其真实性，并保证数据的唯一性等。</p>
+</blockquote>
+</li>
+<li><p>信息安全系统工程将信息安全系统工程的实施过程分为工程过程、()、保证过程三个基本的部分。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 策划过程</li>
+<li><input checked="" disabled="" type="checkbox"> 风险过程</li>
+<li><input disabled="" type="checkbox"> 支持过程</li>
+<li><input disabled="" type="checkbox"> 质量过程</li>
+</ul>
+<blockquote>
+<p>ISSE将信息系统安全系统工程实施过程分解为:工程过程、风险过程、保证过程。</p>
+</blockquote>
+</li>
+<li><p>某车间需要用一台车床和一台铣床加工A、B、C、D四个零件。每个零件都需要先用车床加工，再用铣床加工。车床和铣床加工每个零件所需的工时(包括加工前的准备时间以及加工后的处理时间)如下表;</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309211536603.png" alt="image-20230921153640466"></p>
+<p>若以A、B、C、D零件顺序安排加工，则共需32小时。适当调整零件加工顺序，可使所需总工时最短。在这种最短总工时方案中,零件A在车床上的加工顺序安排在第（）位。四个零件加工共需（)小时。</p>
+<p>问题1：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 1</li>
+<li><input disabled="" type="checkbox"> 2</li>
+<li><input checked="" disabled="" type="checkbox"> 3</li>
+<li><input disabled="" type="checkbox"> 4</li>
+</ul>
+<p>问题2：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 21</li>
+<li><input checked="" disabled="" type="checkbox"> 22</li>
+<li><input disabled="" type="checkbox"> 23</li>
+<li><input disabled="" type="checkbox"> 24</li>
+</ul>
+<blockquote>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309211542461.png" alt="image-20230921154249414"></p>
+</blockquote>
+</li>
+<li><p>某公司需要根据下一年度宏观经济的增长趋势预测决定投资策略。宏观经济增长趋势有不景气、不变和景气三种，投资策略有积极、稳健和保守三种,各种状态的收益，如下表所示:</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309211543791.png" alt="image-20230921154348754"></p>
+<p>按照后悔值准则，应该选择（)决策。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 积极</li>
+<li><input checked="" disabled="" type="checkbox"> 稳健</li>
+<li><input disabled="" type="checkbox"> 保守</li>
+<li><input disabled="" type="checkbox"> 以上都不是</li>
+</ul>
+<blockquote>
+<p>后悔值准则:各经济趋势下最大值减去其他值，选出后悔值最小的决策。(最大后悔值中选最小)各决策的最大后悔值。积极:350，稳健: 250，保守:300。选择稳健决策。</p>
+</blockquote>
+</li>
+<li><p>以下关于干系人管理说法不正确的是( ) 。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 规划干系人管理是—个反复的过程，应由项目经理定期开展</li>
+<li><input checked="" disabled="" type="checkbox"> 管理干系人能帮助项目经理全面监督干系人之间的关系，以调整策略和计划，调动干系人参与</li>
+<li><input disabled="" type="checkbox"> 应把干系人满意度作为—个关键的项目目标来管理</li>
+<li><input disabled="" type="checkbox"> 整个项目周期中项目干系人都可能发生增减变化</li>
+</ul>
+<blockquote>
+<p>控制干系人子过程全面监督项目千系人之间的关系，调整策略和计划，以调动干系人参与的过程。本题考查对干系人管理各个子过程的理解。</p>
+</blockquote>
+</li>
+<li><p>在控制进度的数据分析技术中，(）检查项目绩效随时间的变化情况，以确定绩效是在改善还是在恶化。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 趋势分析</li>
+<li><input disabled="" type="checkbox"> 绩效审查</li>
+<li><input disabled="" type="checkbox"> 偏差分析</li>
+<li><input disabled="" type="checkbox"> 假设情景分析</li>
+</ul>
+<blockquote>
+<p>本题考查控制进度的ITTO，参考《信息系统项目管理师教程》(第4版）第10.8.2小节，P328。<br>趋势分析:检查项目绩效随时间的变化情况，以确定绩效是在改善还是在恶化。图形分析技术有助于理解截至目前的绩效，并与未来的绩效目标(表示为完工日期)进行对比。<br>绩效审查:指根据进度基准测量、对比和分析进度绩效，如实际开始和完成日期、已完成百分比以及当前工作的剩余持续时间。<br>偏差分析:关注实际开始和完成日期与计划的偏离，实际持续时间与计划的差异，以及浮动时间的偏差。它包括确定偏离进度基准的原因与程度，评估这些偏差对未来工作的影响，以及确定是否需要采取纠正或预防措施。假设情景分析:基于项目风险管理过程的输出，对各种不同的情景进行评估，促使进度模型符合项目管理计划和批准的基准。<br>综上所述，本题参考答案为A选项。</p>
+</blockquote>
+</li>
+<li><p>() is the process of identifying and documenting project roles, responsibilities, required skills, reporting relationships, and creating a staffing management plan.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Manage Project Team</li>
+<li><input disabled="" type="checkbox"> Acquire Project Team</li>
+<li><input checked="" disabled="" type="checkbox"> Planning Human Resource Management</li>
+<li><input disabled="" type="checkbox"> Develop Project Team</li>
+</ul>
+<blockquote>
+<p>（规划人力资源管理）是确定和记录项目角色、责任、所需技能、报告关系以及创建人员配置管理计划的过程。<br>A.管理项目团队</p>
+<p>B.组建项目团队</p>
+<p>C.规划人力资源管理</p>
+<p>D.建设项目团队</p>
+</blockquote>
+</li>
+<li><p>() is used to store configuration items and record all information related to configuration items.lt is an effective tool forconfiguration management.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Milestone</li>
+<li><input disabled="" type="checkbox"> Configuration library</li>
+<li><input disabled="" type="checkbox"> Configuration baseline</li>
+<li><input disabled="" type="checkbox"> Configuration item</li>
+</ul>
+<blockquote>
+<p>(配置库)用来存放配置项并记录与配置项相关的所有信息，是配置管理的有效工具。</p>
+<p>A.里程碑<br>B.配置库</p>
+<p>C.配置基线</p>
+<p>D.配置项</p>
+</blockquote>
+</li>
+<li><p>Quality planning tools are often used to help plan efective quality management activities. ( ) is one of such tools，which involves comparing actual or planned project practices to those of other projects to generate ideas for improvement and toprovide a basis by which to measure performance.</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Benchmarking</li>
+<li><input disabled="" type="checkbox"> Quality metric</li>
+<li><input disabled="" type="checkbox"> Quality checklist</li>
+<li><input disabled="" type="checkbox"> Brainstorming</li>
+</ul>
+<blockquote>
+<p>质量规划工具通常是用来帮助计划有效的质量管理活动。()就是一个这样的工具，它是将实际实施过程中或计划之中的项目做法与其他项目进行比较，以便形成改进意见，并为绩效考核提供一个基础。<br>A、基准分析B、质量度量指标C、质量核对表D、头脑风暴</p>
+</blockquote>
+</li>
+<li><p>( ) is a message digest algorithm with a key. The key includes public key and private key. lt is used to verify data integrity,authenticate data source and anti denial. lt follows Osl reference model, private key signature and public key verification.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Security scan</li>
+<li><input disabled="" type="checkbox"> Honeypot</li>
+<li><input disabled="" type="checkbox"> Digital mining</li>
+<li><input disabled="" type="checkbox"> Digital signature</li>
+</ul>
+<blockquote>
+<p>(数字签名)是一个带有密钥的消息摘要算法，这个密钥包括了公钥和私钥，用于验证数据完整性、认证数据来源和抗否认，遵循OSI参考模型、私钥签名和公钥验证。<br>A.安全扫描<br>B.蜜罐技术C.数据挖掘D.数字签名</p>
+</blockquote>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/09/21/%E6%97%A5%E5%B8%B8%E6%A8%A1%E6%8B%9F%E9%94%99%E9%A2%98%E6%9C%AC/">http://example.com/2023/09/21/%E6%97%A5%E5%B8%B8%E6%A8%A1%E6%8B%9F%E9%94%99%E9%A2%98%E6%9C%AC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AF%8F%E6%97%A5%E6%A8%A1%E6%8B%9F/">每日模拟</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122193.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/09/23/%E5%8D%81%E4%B8%83%E3%80%81%E9%A1%B9%E7%9B%AE%E5%B9%B2%E7%B3%BB%E4%BA%BA%E7%AE%A1%E7%90%86%E9%94%99%E9%A2%98%E6%9C%AC/" title="十七、项目干系人管理错题本"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124747.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">十七、项目干系人管理错题本</div></div><div class="info-2"><div class="info-item-1">十七、项目干系人管理-错题本 （）是项目干系人管理的主要目的。   识别项目的所有潜在用户来确保完成项目总体设计  避免项目干系人提出不致的要求  通过制订对项目干系人调查表来关注对项目的评价  避免项目干系人在项目管理中出现严重分歧   项目干系人管理的主要目的是避免项目干系人在项目管理中出现严重分歧   在编制沟通计划时，干系人登记册是沟通计划编制的输入，（）不是干系人登记册的内容。   主要沟通对象  关键影响人  次要沟通对象  组织结构与干系人的责任关系   干系人登记出是用于记录已识别的干系人的所有详细信息，包括（但不限于）基本信息、评估信息、干系人分类。但是组织结构与干系人的责任关系不列入其中。   （）不属于项目干系人管理的输入。   干系人管理计划  干系人沟通需求  变更日志  问题日志   管理干系人参与的输入包括干系人管理计划、沟通管理计划、变更日志。问题日志是输出。   在了解和管理干系人期望时，可以采用多种分类方法对干系人进行分类管理。其中（）方法是根据干系人主动参与项目的程度以及改变项目计划或执行的能力进行分组。   权力&#x2F;利益方格 ...</div></div></div></a><a class="pagination-related" href="/2023/09/17/wordpres%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="wordpress使用精进历程"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124713.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">wordpress使用精进历程</div></div><div class="info-2"><div class="info-item-1"> 最近用wordpress自己搭建了一个自用的博客。 还是有一点新的体会的。 2023-07-09，打算重新搭建下，重头开始下，搭载最近的wordpress。 2023-07-09更新，还是没有折腾好  一、WordPress的主题因为我是主要做博客，分享的主要是博客主题。  Kratos，免费  典型的个人博客风格，很不错的，算是第一个推荐 2.  二、WordPress插件 WordPress 导入工具  从 WordPress 导出文件中导入日志、页面、评论、自定义字段、分类、标签或更多内容。 2.  三、WordPress细节 特色图片尺寸，一般尺寸为 1200 x 628 像素。  </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Office2021安装，使用KMS服务器急活教程 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、声明首先在正文前声明一点: 不要使用任何来路不明的office安装包，不要使用任何来路不明的急活器。 绝大多数通过百度下载的所谓急活器内置病毒，为了省订阅的钱让自己的电脑成为勒索病毒的对象或者成为肉鸡得不偿失。 目前主流使用的免费急活方式是KMS急活，KMS全称密钥管理服务，原本是一种企业用于批量急活计算机的方法. 使用KMS急活的步骤是企业方部署一个KMS主机，用于管理客户端计算机的急活状态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office2021安装，使用KMS服务器急活教程">
+<meta property="og:url" content="http://example.com/2023/09/10/office2021%E5%AE%89%E8%A3%85%EF%BC%8C%E4%BD%BF%E7%94%A8KMS%E6%9C%8D%E5%8A%A1%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="一、声明首先在正文前声明一点: 不要使用任何来路不明的office安装包，不要使用任何来路不明的急活器。 绝大多数通过百度下载的所谓急活器内置病毒，为了省订阅的钱让自己的电脑成为勒索病毒的对象或者成为肉鸡得不偿失。 目前主流使用的免费急活方式是KMS急活，KMS全称密钥管理服务，原本是一种企业用于批量急活计算机的方法. 使用KMS急活的步骤是企业方部署一个KMS主机，用于管理客户端计算机的急活状态">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124754.jpg">
+<meta property="article:published_time" content="2023-09-10T03:12:50.000Z">
+<meta property="article:modified_time" content="2024-01-19T08:55:38.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="常用软件">
+<meta property="article:tag" content="office安装">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124754.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/09/10/office2021%E5%AE%89%E8%A3%85%EF%BC%8C%E4%BD%BF%E7%94%A8KMS%E6%9C%8D%E5%8A%A1%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Office2021安装，使用KMS服务器急活教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124754.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">Office2021安装，使用KMS服务器急活教程</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Office2021安装，使用KMS服务器急活教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-10T03:12:50.000Z" title="发表于 2023-09-10 11:12:50">2023-09-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-19T08:55:38.000Z" title="更新于 2024-01-19 16:55:38">2024-01-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">993</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="一、声明"><a href="#一、声明" class="headerlink" title="一、声明"></a>一、声明</h2><p>首先在正文前声明一点: 不要使用任何来路不明的office安装包，不要使用任何来路不明的急活器。</p>
+<p>绝大多数通过百度下载的所谓急活器内置病毒，为了省订阅的钱让自己的电脑成为勒索病毒的对象或者成为肉鸡得不偿失。</p>
+<p>目前主流使用的免费急活方式是KMS急活，KMS全称密钥管理服务，原本是一种企业用于批量急活计算机的方法.</p>
+<p>使用KMS急活的步骤是企业方部署一个KMS主机，用于管理客户端计算机的急活状态。接下来需要急活的客户端计算机连接到这个KMS服务器获取急活状态。</p>
+<p>也就是说大部分免费急活office或者windows的手段，其实是将本地计算机更改为KMS客户端，然后连接到一个免费的KMS服务器从而完成急活。</p>
+<p>而我们国内一些聪明的开发者，把这一套原本免费的步骤包装成一个XX急活器，然后植入广告或者病毒放在百度上用以牟利。</p>
+<p>事实上急活office不需要安装任何急活器，只需要用到windows内置的命令提示符即可。</p>
+<h2 id="二、具体步骤"><a href="#二、具体步骤" class="headerlink" title="二、具体步骤"></a>二、具体步骤</h2><ol>
+<li><h4 id="首先我们需要安装office本体，第一步是下载office2021安装包。"><a href="#首先我们需要安装office本体，第一步是下载office2021安装包。" class="headerlink" title="首先我们需要安装office本体，第一步是下载office2021安装包。"></a>首先我们需要安装office本体，第一步是下载office2021安装包。</h4><p>我们建议任何软件的安装包一定要在官方网站下载，因为你永远不知道你在xx网盘或者xx软件园里下载的安装包被植入了什么病毒。</p>
+<p>Office 2021 学生版 :<br><a href="https://link.zhihu.com/?target=http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-US/HomeStudent2021Retail.img">镜像下载地址</a></p>
+<p>Office 2021 商业版:<br><a href="https://link.zhihu.com/?target=http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-US/HomeBusiness2021Retail.img">镜像下载地址</a></p>
+<p>Office 2021 专业版:<br><a href="https://link.zhihu.com/?target=http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-US/Professional2021Retail.img">镜像下载地址</a></p>
+<p>Office 2021 专业版PLUS :<br><a href="https://link.zhihu.com/?target=http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-US/ProPlus2021Retail.img">镜像下载地址</a></p>
+<p>Office 2021 Mac :<br><a href="https://link.zhihu.com/?target=https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.53.21091200_BusinessPro_Installer.pkg">镜像下载地址</a></p>
+<p>选择自己需要的版本下载对应的光盘映像文件。</p>
+</li>
+<li><h4 id="安装镜像"><a href="#安装镜像" class="headerlink" title="安装镜像"></a>安装镜像</h4><p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101118521.png" alt="image-20230910111810461"></p>
+<p>双击Setup.exe，弹出用户账户控制(UAC)界面，可以看到安装包的数字签名来自Microsoft Corporation。说明安装包是安全的。如果有的同学在其他地方下载的安装包，在这个界面看到的是未知发布者， 那就要注意安装包已经被修改过的可能性了。</p>
+<p>在UAC界面点击确认后，会看到如下的界面：<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101119290.png" alt="image-20230910111905125">然后只需要按照提示完成安装就可以。</p>
+<p>有人在这里遇到安装错误：<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101119514.png" alt="image-20230910111930791">这种一般是与计算机上已经安装的office 365产生冲突了，或者计算机上留有以前版本的office残余。</p>
+<p>这时候需要下载微软官方提供的office卸载支持工具：</p>
+<p>下载链接: <a href="https://link.zhihu.com/?target=https://aka.ms/SaRA-officeUninstallFromPC">SaRA-officeUninstallFromPC</a></p>
+<p>工具来自于: <a href="https://link.zhihu.com/?target=https://support.microsoft.com/en-us/office/fix-office-installation-errors-d5df89a9-0507-4b4c-92f9-22f457e630aa?ns=ocsac2rinstall&version=16&syslcid=1033&uilcid=1033&appver=cin160&helpid=%222-44-30182%22&ui=en-us&rs=en-us&ad=us">链接地址</a></p>
+<p>一般需要网络好，我的网络表示下载不了。</p>
+<p>下载后双击启动，按照说明卸载已有的office并重启计算机即可解决错误。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101120639.png" alt="image-20230910112056599"></p>
+</li>
+</ol>
+<h2 id="三、修改中文语言"><a href="#三、修改中文语言" class="headerlink" title="三、修改中文语言"></a>三、修改中文语言</h2><p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101121035.png" alt="img"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101122361.png" alt="image-20230910112201317"></p>
+<p>点击intall，等待跳出的更新界面显示完成。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101122506.png" alt="image-20230910112222467"></p>
+<p>重启office就好。</p>
+<h4 id="四、急活"><a href="#四、急活" class="headerlink" title="四、急活"></a>四、急活</h4><ol>
+<li><p>cmd，以管理员身份运行。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101123664.png" alt="image-20230910112310592"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101123515.png" alt="image-20230910112317461"></p>
+</li>
+<li><p>一次录入命令代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /d %<span class="title class_">ProgramFiles</span>(x86)%\<span class="title class_">Microsoft</span> <span class="title class_">Office</span>\<span class="title class_">Office16</span></span><br></pre></td></tr></table></figure>
+
+<p>复制完成后，在CMD窗口中，按下”Ctrl+V”，或者单击一次鼠标右键粘贴命令，然后按下回车键确定执行命令。</p>
+<p>如果出现下面的界面，显示”系统找不到指定的路径”，说明你安装的是64位office(一般安装的都是64位的office)。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101124556.png" alt="image-20230910112449524"></p>
+<p>使用如下这个命令代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /d %<span class="title class_">ProgramFiles</span>%\<span class="title class_">Microsoft</span> <span class="title class_">Office</span>\<span class="title class_">Office16</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101125145.png" alt="image-20230910112528113"></p>
+</li>
+<li><p>复制如下代码，目的是安装office2021批量许可证：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> /f %x <span class="title function_">in</span> (<span class="string">&#x27;dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms&#x27;</span>) <span class="keyword">do</span> cscript ospp.<span class="property">vbs</span> /<span class="attr">inslic</span>:<span class="string">&quot;..\root\Licenses16\%x&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101126890.png" alt="image-20230910112618851"></p>
+<p>等待命令行运行完毕！</p>
+<p>依次录入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.<span class="property">vbs</span> /<span class="attr">setprt</span>:<span class="number">1688</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.<span class="property">vbs</span> /<span class="attr">unpkey</span>:6F7TH &gt;nul</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.<span class="property">vbs</span> /<span class="attr">inpkey</span>:<span class="variable constant_">FXYTK</span>-<span class="title class_">NJJ8C</span>-<span class="title class_">GB6DW</span>-3DYQT-6F7TH</span><br></pre></td></tr></table></figure>
+
+<p>然后是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.<span class="property">vbs</span> /<span class="attr">sethst</span>:kms.<span class="property">moeclub</span>.<span class="property">org</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.<span class="property">vbs</span> /act</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309101128875.png" alt="image-20230910112804824"></p>
+<p>完毕！</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/09/10/office2021%E5%AE%89%E8%A3%85%EF%BC%8C%E4%BD%BF%E7%94%A8KMS%E6%9C%8D%E5%8A%A1%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/">http://example.com/2023/09/10/office2021%E5%AE%89%E8%A3%85%EF%BC%8C%E4%BD%BF%E7%94%A8KMS%E6%9C%8D%E5%8A%A1%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">常用软件</a><a class="post-meta__tags" href="/tags/office%E5%AE%89%E8%A3%85/">office安装</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124754.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/09/10/16.%E9%A1%B9%E7%9B%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/" title="项目质量管理"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122191.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">项目质量管理</div></div><div class="info-2"><div class="info-item-1"> 项目质量管理的基础质量与项目质量质量定义： 国际标准化组织（ISO），反映实体满足主题明确和隐含需求的能力的特征总和。 国家标准GB&#x2F;T 19000，一组固有特征满足要求的程度。 通常定义：是指产品的质量，广义上的质量还包括工作质量。  质量与等级的区别：概念不同：  质量：作为实现的性能或成果，是“一系列内在特征满足要求的程度（ISO...</div></div></div></a><a class="pagination-related" href="/2023/09/09/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B-%E9%94%99%E9%A2%98%E6%9C%AC/" title="五、信息系统工程-错题本"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124747.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">五、信息系统工程-错题本</div></div><div class="info-2"><div class="info-item-1">题目从第五章第100题开始。 五、信息系统工程-错题本 用户在开发环境下进行的测试是（）。   配置项测试  Aplha测试  Beta测试  回归测试   Aplha测试是指由用户在开发环境下进行测试，通过Alpha测试以后的产品，通常称为Aplha版； Beta测试是指由用户在实际使用环境下进行测试，通过Beta测试的产品通常称为Beta版。 一般在通过Beta测试后，才能把产品或成果交付用户。   （）关注的是业务，以业务驱动技术，强调IT与业务的对其，以开放标准封装业务流程和已有的应用系统，实现应用系统之间的相互访问。   面向过程方法  面向对象方法  面向构件方法 ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-19</div><div class="info-item-2">Typora 1.7.4 版本激活步骤</div></div><div class="info-2"><div class="info-item-1">Typora 1.7.4 版本激活截止2023&#x2F;9&#x2F;9 13：50，更新于2023&#x2F;10&#x2F;23&#x2F;17：25 说明以前本台式PC电脑一直用的0.96版本Typora的，最后一个免费的Beta版本，现在是89元3台电脑上都可以使用，也不贵。前几天在学校没回家的时候发现1.6的激活工具在更新的1.7版本用不了了，于是这一期重新找了1.7的激活脚本和激活教程分享给大家。如果大家有条件的话还是支持一下开发者们，正版支持Typora 官方中文站 (typoraio.cn)，以后我一定补票不白嫖嘿嘿。 同时，网络上有很多免费的资源，可以找到不同版本的 Typora，这里贴出官网的不同版本 Typora 的特性文档Typora Support...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%A3%B0%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">一、声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text">二、具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85office%E6%9C%AC%E4%BD%93%EF%BC%8C%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%98%AF%E4%B8%8B%E8%BD%BDoffice2021%E5%AE%89%E8%A3%85%E5%8C%85%E3%80%82"><span class="toc-number">2.0.1.</span> <span class="toc-text">首先我们需要安装office本体，第一步是下载office2021安装包。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%95%9C%E5%83%8F"><span class="toc-number">2.0.2.</span> <span class="toc-text">安装镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80"><span class="toc-number">3.</span> <span class="toc-text">三、修改中文语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%80%A5%E6%B4%BB"><span class="toc-number">3.0.1.</span> <span class="toc-text">四、急活</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

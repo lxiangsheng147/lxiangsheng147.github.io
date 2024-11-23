@@ -1,0 +1,502 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>hexo使用精进历程 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文章来源之Front-matter | Hexo官方文档 学习技术之前，看官方文档真是一个享受 很多问题都可以直接在里面找到答案，豁然开朗  这里的内容 和hexo文章编辑注意事项里面的有部分一致，后续再做调整 Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： -–title: Hello Worlddate: 2013&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo使用精进历程">
+<meta property="og:url" content="http://example.com/2023/07/24/hexo%E4%BD%BF%E7%94%A8%E7%B2%BE%E8%BF%9B%E5%8E%86%E7%A8%8B/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="文章来源之Front-matter | Hexo官方文档 学习技术之前，看官方文档真是一个享受 很多问题都可以直接在里面找到答案，豁然开朗  这里的内容 和hexo文章编辑注意事项里面的有部分一致，后续再做调整 Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： -–title: Hello Worlddate: 2013&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg">
+<meta property="article:published_time" content="2023-07-23T22:48:01.000Z">
+<meta property="article:modified_time" content="2023-08-14T09:13:40.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/07/24/hexo%E4%BD%BF%E7%94%A8%E7%B2%BE%E8%BF%9B%E5%8E%86%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'hexo使用精进历程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">hexo使用精进历程</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">hexo使用精进历程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-23T22:48:01.000Z" title="发表于 2023-07-24 06:48:01">2023-07-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-14T09:13:40.000Z" title="更新于 2023-08-14 17:13:40">2023-08-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/hexo%E4%BD%BF%E7%94%A8%E5%8E%86%E7%A8%8B/">hexo使用历程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>文章来源之<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter | Hexo官方文档</a></p>
+<p>学习技术之前，看官方文档真是一个享受</p>
+<p>很多问题都可以直接在里面找到答案，豁然开朗</p>
+</blockquote>
+<p>这里的内容 和<a href="/2023/07/10/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E6%B3%A8%E6%84%8F%E7%82%B9/" title="hexo文章编辑注意事项">hexo文章编辑注意事项</a>里面的有部分一致，后续再做调整</p>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<p>-–<br>title: Hello World<br>date: 2013&#x2F;7&#x2F;13 20:46:25<br>-–  </p>
+<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>布局</td>
+<td><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+<td>文章的文件名</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td><code>updated</code></td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>categories</code></td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>覆盖文章的永久链接，永久链接应该以 <code>/</code> 或 <code>.html</code> 结尾</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>excerpt</code></td>
+<td>纯文本的页面摘要。使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81%E5%92%8C%E6%88%AA%E6%96%AD">该插件</a> 来格式化文本</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disableNunjucks</code></td>
+<td>启用时禁用 Nunjucks 标签 <code>&#123;&#123; &#125;&#125;</code>&#x2F;<code>&#123;% %&#125;</code> 和 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins">标签插件</a> 的渲染功能</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td>设置语言以覆盖 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/internationalization#%E8%B7%AF%E5%BE%84">自动检测</a></td>
+<td>继承自 <code>_config.yml</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h2><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
+<p>categories:<br>- Diary<br>tags:<br>- PS3<br>- Games  </p>
+<blockquote>
+<p><strong>分类方法的分歧</strong></p>
+<p>如果您有过使用 WordPress 的经验，就很容易误解 Hexo 的分类方式。WordPress 支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是 Hexo 不支持指定多个同级分类。下面的指定方法：</p>
+<p>categories:<br>- Diary<br>- Life  </p>
+<p>会使分类 <code>Life</code> 成为 <code>Diary</code> 的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
+<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
+<p>categories:<br>- [Diary, PlayStation]<br>- [Diary, Games]<br>- [Life]  </p>
+<p>此时这篇文章同时包括三个分类： <code>PlayStation</code> 和 <code>Games</code> 分别都是父分类 <code>Diary</code> 的子分类，同时 <code>Life</code> 是一个没有子分类的分类。</p>
+</blockquote>
+<hr>
+<h2 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h2><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<p>虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。</p>
+<p><em>标签插件不应该被包裹在 Markdown 语法中，例如： <code>[](&#123;% post_path lorem-ipsum %&#125;)</code> 是不被支持的。</em></p>
+<h4 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h4><p>在文章中插入引言，可包含作者、来源和标题。</p>
+<p><strong>别号：</strong> quote</p>
+<blockquote><p>content  </p>
+<footer><strong>\[author\[</strong><cite>source\]\] \[link\] \[source\_link\_title\]</cite></footer></blockquote>  
+
+<h6 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h6><p><strong>没有提供参数，则只输出普通的 blockquote</strong></p>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.  </p>
+</blockquote>  
+
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p><strong>引用书上的句子</strong></p>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.  </p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>  
+
+<blockquote>
+<p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+</blockquote>
+<p><strong>引用 Twitter</strong></p>
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a target="_blank" rel="noopener" href="http://devdocs.io/">http://devdocs.io</a>  </p>
+<footer><strong>@DevDocs</strong><cite><a target="_blank" rel="noopener" href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>  
+
+<blockquote>
+<p>NEW: DevDocs now comes with syntax highlighting. <a target="_blank" rel="noopener" href="http://devdocs.io/">http://devdocs.io</a></p>
+</blockquote>
+<p><strong>引用网络上的文章</strong></p>
+<blockquote><p>Every interaction is both precious and an opportunity to delight.  </p>
+<footer><strong>Seth Godin</strong><cite><a target="_blank" rel="noopener" href="http://sethgodin.typepad.com/seths\_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>  
+
+<blockquote>
+<p>Every interaction is both precious and an opportunity to delight.</p>
+</blockquote>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>在文章中插入代码。</p>
+<p><strong>别名：</strong> code</p>
+<figure class="highlight plaintext"><figcaption><span>\[title\] \[lang:language\] \[url\] \[link text\] \[additional options\]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">code snippet  </span><br></pre></td></tr></table></figure>  
+
+<p>以 <code>option:value</code> 的格式指定额外选项，例如：<code>line_number:false first_line:5</code>。</p>
+<table>
+<thead>
+<tr>
+<th>额外选项</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>line_number</code></td>
+<td>显示行号</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>line_threshold</code></td>
+<td>只有代码块的行数超过该阈值，才显示行数</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>highlight</code></td>
+<td>启用代码高亮</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>first_line</code></td>
+<td>指定第一个行号</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>mark</code></td>
+<td>突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围</td>
+<td></td>
+</tr>
+<tr>
+<td>例如： <code>mark:1,4-7,10</code> 将标记第1、4至7和10行</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>wrap</code></td>
+<td>用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> 包裹代码块</td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
+<h2 id="常用插件推荐和插件安装"><a href="#常用插件推荐和插件安装" class="headerlink" title="常用插件推荐和插件安装"></a>常用插件推荐和插件安装</h2><p>Hexo 本身提供了一个框架，通过丰富的拓展插件，能够进一步优化使用体验，你可以在 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://hexo.io/plugins/">Hexo 插件</a> 中寻找适合你的拓展。</p>
+<h2 id="生成永久链接"><a href="#生成永久链接" class="headerlink" title="生成永久链接"></a>生成永久链接</h2><p>hexo 文章链接默认的生成规则是：<code>:year/:month/:day/:title</code>，即按照年、月、日、标题的顺序</p>
+<p>当文件名为中文时，会导致 url 链接中也出现中文</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">https</span>:<span class="comment">//emoryhuang.github.io/blog/2021/05/09/Hexo %E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90</span></span><br></pre></td></tr></table></figure>
+
+<p>这样的链接非常不利于阅读，也不美观</p>
+<p><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a> 插件通过算法为文章生成永久链接，相对来说更加简洁方便。</p>
+<ol>
+<li>安装 hexo-abbrlink 插件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>修改 config.yml 文件中的永久链接：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink</span>: blog/:abbrlink.<span class="property">html</span> # 也可以直接写 :abbrlink/</span><br><span class="line"><span class="attr">abbrlink</span>:</span><br><span class="line">  <span class="attr">alg</span>: crc32 #算法： <span class="title function_">crc16</span>(<span class="keyword">default</span>) and crc32</span><br><span class="line">  <span class="attr">rep</span>: dec #进制： <span class="title function_">dec</span>(<span class="keyword">default</span>) and hex</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a> 支持 16 位、32 位以及十进制，十六进制共 4 种不同的模式，你可以按照需求选择。</p>
+<p>生成链接样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># crc16 &amp; hex</span><br><span class="line"><span class="attr">https</span>:<span class="comment">//post.zz173.com/posts/66c8.html</span></span><br><span class="line"></span><br><span class="line"># crc16 &amp; dec</span><br><span class="line"><span class="attr">https</span>:<span class="comment">//post.zz173.com/posts/65535.html</span></span><br><span class="line"></span><br><span class="line"># crc32 &amp; hex</span><br><span class="line"><span class="attr">https</span>:<span class="comment">//post.zz173.com/posts/8ddf18fb.html</span></span><br><span class="line"></span><br><span class="line"># crc32 &amp; dec</span><br><span class="line"><span class="attr">https</span>:<span class="comment">//post.zz173.com/posts/1690090958.html</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-RSS-订阅"><a href="#添加-RSS-订阅" class="headerlink" title="添加 RSS 订阅"></a>添加 RSS 订阅</h2><blockquote>
+<p>RSS 的全称是 Really Simple Syndication（简易信息聚合），它是一种消息来源的格式规范，网站可以按照这种格式规范提供文章的标题、摘要、全文等信息给订阅用户，用户可以通过订阅不同网站 RSS 链接的方式将不同的信息源进行聚合，在一个工具里阅读这些内容。当网站内容更新时，可以通过订阅 RSS 源在 RSS 阅读器上获取更新的信息</p>
+</blockquote>
+<ol>
+<li>安装 hexo-generator-feed 插件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在 config.yml 文件中添加如下的订阅配置：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed</span>:</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">type</span>: atom</span><br><span class="line">  <span class="attr">path</span>: atom.<span class="property">xml</span></span><br><span class="line">  <span class="attr">limit</span>: <span class="number">20</span></span><br><span class="line">  <span class="attr">hub</span>:</span><br><span class="line">  <span class="attr">content</span>:</span><br><span class="line">  <span class="attr">content_limit</span>: <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim</span>: <span class="string">&quot; &quot;</span></span><br><span class="line">  <span class="attr">order_by</span>: -date</span><br></pre></td></tr></table></figure>
+
+<p>更多配置信息，可以在这里查看 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></p>
+<p>配置完成之后，重新部署，在你的网站<a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/pro/domain-sales?from_column=20420&from=20420">域名</a>后添加 <code>/atom.xml</code> 即可查看。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">https</span>:<span class="comment">//emoryhuang.cn/atom.xml</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Minifier"><a href="#Minifier" class="headerlink" title="Minifier"></a>Minifier</h2><p>看名字就知道，很简单的一个插件，可以压缩 HTML, CSS, JS and Image，配置也很简单。</p>
+<ol>
+<li>安装 hexo-all-minifier</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-all-minifier --save</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在 config.yml 文件中添加如下配置：</li>
+</ol>
+<h2 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h2><p>向你的 Hexo 里放上一只二次元<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/bi?from_column=20420&from=20420">看板</a>娘，<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">项目地址</a></p>
+<p>演示：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://l2dwidget.js.org/dev.html">https://l2dwidget.js.org/dev.html</a></p>
+<p>模型预览：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://huaji8.top/post/live2d-plugin-2.0/">https://huaji8.top/post/live2d-plugin-2.0/</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在 Git Bash 中安装模块：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>or</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>向 Hexo 的 <code>_config.yml</code> 文件添加配置，例子如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d</span>:</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">scriptFrom</span>: local</span><br><span class="line">  <span class="attr">pluginRootPath</span>: live2dw/</span><br><span class="line">  <span class="attr">pluginJsPath</span>: lib/</span><br><span class="line">  <span class="attr">pluginModelPath</span>: assets/</span><br><span class="line">  <span class="attr">tagMode</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">model</span>:</span><br><span class="line">    <span class="attr">use</span>: live2d-widget-model-wanko  ## 更换为你的模型</span><br><span class="line">  <span class="attr">display</span>:</span><br><span class="line">    <span class="attr">position</span>: right</span><br><span class="line">    <span class="attr">width</span>: <span class="number">150</span></span><br><span class="line">    <span class="attr">height</span>: <span class="number">300</span></span><br><span class="line">  <span class="attr">mobile</span>:</span><br><span class="line">    <span class="attr">show</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">react</span>:</span><br><span class="line">    <span class="attr">opacity</span>: <span class="number">0.7</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/xiazeyu/live2d-widget-models">点这里</a> 可以查看现有的模型</p>
+<p>在 Git Bash 中安装喜欢的模型</p>
+<p>将包名输入位于 <code>_config.yml</code> 的 <code>model.use</code> 中。</p>
+<h2 id="更换-Markdown-渲染器"><a href="#更换-Markdown-渲染器" class="headerlink" title="更换 Markdown 渲染器"></a>更换 Markdown 渲染器</h2><p>在写博客时，往往会涉及到一些数学公式，当你需要使用 LaTeX 语法时，由于 Hexo 默认的 Markdown 渲染器(hexo-renderer-marked)不支持复杂公式，导致渲染失败，这时候就需要更换 Markdown 渲染器。</p>
+<p>在更换 Markdown 渲染器时，需要卸载原先的 Markdown 渲染器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+
+<p>在 Fluid 主题中，官网给出了推荐的 Markdown 渲染器，你可以 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://fluid-dev.github.io/hexo-fluid-docs/guide/#latex-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">点击这里查看详细信息</a></p>
+<p>不可同时安装多个渲染器，如果更换公式引擎，对应渲染器也要一并更换。</p>
+<p>说多了都是泪 😭</p>
+<p>下面介绍几种常见的 Markdown 渲染器，你可以在 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://hexo.io/plugins/">Hexo 插件</a> 中找到它们。本文使用的渲染器为：<code>@upupming/hexo-renderer-markdown-it-plus</code>，配合 VSCode + Markdown All in One 食用效果良好。</p>
+<p>你也可以在 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://www.npmjs.com/search?q=hexo-renderer-markdown">这里</a> 查看更多版本。</p>
+<ol>
+<li>hexo-renderer-marked</li>
+</ol>
+<p>Hexo 默认的 Markdown 的渲染器，不支持 Mathjax，不支持插件扩展，不支持 emoji 表情</p>
+<ul>
+<li>项目地址：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/hexojs/hexo-renderer-marked">https://github.com/hexojs/hexo-renderer-marked</a></li>
+<li>安装命令：<code>npm install hexo-renderer-marked --save</code></li>
+</ul>
+<ol>
+<li>hexo-renderer-kramed</li>
+</ol>
+<p>基于 hexo-renderer-marked，支持 Mathjax，不支持插件的扩展，不支持 emoji 表情</p>
+<ul>
+<li>项目地址：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/sun11/hexo-renderer-kramed">https://github.com/sun11/hexo-renderer-kramed</a></li>
+<li>安装命令：<code>npm install hexo-renderer-kramed --save</code></li>
+</ul>
+<ol>
+<li>hexo-renderer-markdown-it</li>
+</ol>
+<p>渲染速度比 hexo-renderer-marked 快，支持脚注（上标，下标，下划线），支持 emoji 表情，支持 LaTeX，扩展需要另外通过 npm 安装，你可以在 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://www.npmjs.com/search?q=keywords:markdown-it">这里</a> 找到更多拓展。</p>
+<ul>
+<li>项目地址：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/hexojs/hexo-renderer-markdown-it">https://github.com/hexojs/hexo-renderer-markdown-it</a></li>
+<li>安装命令：<code>npm install hexo-renderer-markdown-it --save</code></li>
+</ul>
+<ol>
+<li>hexo-renderer-markdown-it-plus</li>
+</ol>
+<p>在 hexo-renderer-markdown-it 的基础上默认自带许多插件，可以直接使用</p>
+<ul>
+<li>项目地址：<a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus</a></li>
+<li>安装命令：<code>npm install hexo-renderer-markdown-it-plus --save</code></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>插件虽好，但过犹不及，找到适合自己的才是最重要的，不要看着好用就一股脑全装上去了，食之无味，弃之可惜，最后越来越臃肿。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://github.com/EYHN/hexo-helper-live2d">hexo-helper-live2d</a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://bugwz.com/2019/09/17/hexo-markdown-renderer/">Hexo 的多种 Markdown 渲染器对比分析</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/24/hexo%E4%BD%BF%E7%94%A8%E7%B2%BE%E8%BF%9B%E5%8E%86%E7%A8%8B/">http://example.com/2023/07/24/hexo%E4%BD%BF%E7%94%A8%E7%B2%BE%E8%BF%9B%E5%8E%86%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/08/03/%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0%E9%A2%9820230803/" title="每日练习题"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124705.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">每日练习题</div></div><div class="info-2"><div class="info-item-1">每日练习题 张工程师被任命为一个大型复杂项目的项目经理，他对于该项目的过程管理有以下认识，其中（）是不正确的。   可把该项目分解成为一个个目标相互关联的小项目，形成项目群进行管理  建立统一的项目过程，会大大提高项目之间的协作效率，为项目质量提供有力保证  需要平衡成本和收益后是否决定建立适用于本项目的过程 ...</div></div></div></a><a class="pagination-related" href="/2023/07/10/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E6%B3%A8%E6%84%8F%E7%82%B9/" title="hexo文章编辑注意事项"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124683.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">hexo文章编辑注意事项</div></div><div class="info-2"><div class="info-item-1">title: 文章名 date: 时间 cover: 文章特色图片，尺寸为350*150 第一种： tags: [ ‘Ruby’, ‘Perl’, ‘Python’ ] 第二种： tags:  hexo  disqus   categories:  代表这这个分类下  hexo使用历程  1234categories:- hexo使用历程        代表这个博客在hexo使用历程 这个分类下  </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-10</div><div class="info-item-2">hexo主题美化历程</div></div><div class="info-2"><div class="info-item-1">  这里的内容 和hexo文章编辑注意事项里面的有部分一致，后续再做调整 Hexo之Fluid主题美化1.1Front-matterFront-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说： 1.2待完成任务1 网页统计，等上传到github时，放入这个统计。点击查看 强制https  大佬的博客  1.3添加看板娘安装在Git Bash中安装模块： 1npm install --save hexo-helper-live2d  or 1yarn add hexo-helper-live2d  配置向 Hexo 的 _config.yml 文件添加配置，例子如下 123456789101112131415161718live2d:  enable: true  scriptFrom: local  pluginRootPath: live2dw/  pluginJsPath: lib/  pluginModelPath: assets/  tagMode: false  debug: false  model:    use:...</div></div></div></a><a class="pagination-related" href="/2023/07/10/%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E6%B3%A8%E6%84%8F%E7%82%B9/" title="hexo文章编辑注意事项"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124683.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-10</div><div class="info-item-2">hexo文章编辑注意事项</div></div><div class="info-2"><div class="info-item-1">title: 文章名 date: 时间 cover: 文章特色图片，尺寸为350*150 第一种： tags: [ ‘Ruby’, ‘Perl’, ‘Python’ ] 第二种： tags:  hexo  disqus   categories:  代表这这个分类下  hexo使用历程  1234categories:- hexo使用历程        代表这个博客在hexo使用历程 这个分类下  </div></div></div></a><a class="pagination-related" href="/2023/08/14/%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E5%88%B0gitee/" title="部署本地博客到gitee"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124680.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-14</div><div class="info-item-2">部署本地博客到gitee</div></div><div class="info-2"><div class="info-item-1">部署本地博客到gitee 打开到blog文件夹 12git config --global user.name &quot;刘翔升&quot;git config --global user.email &quot;756680474@qq.com&quot;    运行代码 1ssh-keygen -t rsa -C &quot;756680474@qq.com&quot;  需要回车3次，  运行代码，以获取密钥 1cat ~/.ssh/id_rsa.pub    在gitee创建SSH公钥 复制上面的公钥，放入页面  测试是否设置成功 1ssh -T git@gitee.com    修改配置文件 _config.yml 12345# Deployment## Docs: https://hexo.io/docs/one-command-deploymentdeploy:  type: &#x27;git&#x27;  repository: git@gitee.com:lxiangsheng147/lxiangsheng147.git    完成最后的部署 1npm...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number">1.</span> <span class="toc-text">Front-matter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">2.</span> <span class="toc-text">分类和标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%EF%BC%88Tag-Plugins%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">标签插件（Tag Plugins）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="toc-number">3.0.1.</span> <span class="toc-text">引用块</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.0.1.0.1.</span> <span class="toc-text">示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">3.0.2.</span> <span class="toc-text">代码块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90%E5%92%8C%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">常用插件推荐和插件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">生成永久链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85"><span class="toc-number">6.</span> <span class="toc-text">添加 RSS 订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Minifier"><span class="toc-number">7.</span> <span class="toc-text">Minifier</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98"><span class="toc-number">8.</span> <span class="toc-text">添加看板娘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">8.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">8.2.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2-Markdown-%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text">更换 Markdown 渲染器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">10.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">11.</span> <span class="toc-text">参考</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

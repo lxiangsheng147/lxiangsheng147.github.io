@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>范围管理计划 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="范围管理定义：项目范围管理：包括确保项目做且只做所需的全部工作，以成功完成项目。 项目范围管理主要在意定义和控制那些工作应该包括在项目内，那些不应该包含在项目内。 范围管理的基础： 产品范围和项目范围 产品范围 指某项产品、服务或成果所具有的特征和功能。 衡量是否完成，根据产品需求来衡量的。产品需求规格说明书。   项目范围 包括产品范围，是为交付具有规定特征与功能的产品、服务或成果而必须完成的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="范围管理计划">
+<meta property="og:url" content="http://example.com/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="范围管理定义：项目范围管理：包括确保项目做且只做所需的全部工作，以成功完成项目。 项目范围管理主要在意定义和控制那些工作应该包括在项目内，那些不应该包含在项目内。 范围管理的基础： 产品范围和项目范围 产品范围 指某项产品、服务或成果所具有的特征和功能。 衡量是否完成，根据产品需求来衡量的。产品需求规格说明书。   项目范围 包括产品范围，是为交付具有规定特征与功能的产品、服务或成果而必须完成的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg">
+<meta property="article:published_time" content="2023-09-07T01:59:05.000Z">
+<meta property="article:modified_time" content="2023-09-09T08:00:02.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="知识小结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '范围管理计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">范围管理计划</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">范围管理计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-07T01:59:05.000Z" title="发表于 2023-09-07 09:59:05">2023-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-09T08:00:02.000Z" title="更新于 2023-09-09 16:00:02">2023-09-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A7/">软考高级</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">5.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309032125619.png" alt="image-20230903212556530"></p>
+<h2 id="范围管理"><a href="#范围管理" class="headerlink" title="范围管理"></a>范围管理</h2><h6 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h6><p>项目范围管理：包括确保项目做且只做所需的全部工作，以成功完成项目。</p>
+<p>项目范围管理主要在意定义和控制那些工作应该包括在项目内，那些不应该包含在项目内。</p>
+<h6 id="范围管理的基础："><a href="#范围管理的基础：" class="headerlink" title="范围管理的基础："></a>范围管理的基础：</h6><ul>
+<li>产品范围和项目范围<ul>
+<li>产品范围<ul>
+<li>指某项产品、服务或成果所具有的特征和功能。</li>
+<li>衡量是否完成，根据<strong>产品需求</strong>来衡量的。产品需求规格说明书。</li>
+</ul>
+</li>
+<li>项目范围<ul>
+<li>包括产品范围，是为交付具有规定特征与功能的产品、服务或成果而必须完成的工作。</li>
+<li>衡量是否完成，根据<strong>项目管理计划</strong>来衡量的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>管理新实践</li>
+</ul>
+<h6 id="项目范围管理过程"><a href="#项目范围管理过程" class="headerlink" title="项目范围管理过程"></a>项目范围管理过程</h6><ul>
+<li><h2 id="过程概述，6个过程-规范范围管理"><a href="#过程概述，6个过程-规范范围管理" class="headerlink" title="过程概述，6个过程- 规范范围管理"></a>过程概述，6个过程<br>- 规范范围管理</h2></li>
+<li>裁剪考虑因素</li>
+<li>敏捷与适应方法</li>
+</ul>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309032133501.png" alt="image-20230903213356451"></p>
+<h2 id="范围管理的六个过程"><a href="#范围管理的六个过程" class="headerlink" title="范围管理的六个过程"></a>范围管理的六个过程</h2><h4 id="一、规范范围管理"><a href="#一、规范范围管理" class="headerlink" title="一、规范范围管理"></a>一、规范范围管理</h4><h6 id="定义：-1"><a href="#定义：-1" class="headerlink" title="定义："></a>定义：</h6><p>规范范围管理是为了记录如何定义、确认和控制<strong>项目范围及产品范围</strong>，而创建范围管理计划的过程。</p>
+<h6 id="本过程的主要作用："><a href="#本过程的主要作用：" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><p>在整个项目期间对如何管理范围提供指南和方向。</p>
+<h6 id="开展频率："><a href="#开展频率：" class="headerlink" title="开展频率："></a>开展频率：</h6><p>仅开展一次或仅在项目的预定点开展。</p>
+<h6 id="规范范围管理-输入："><a href="#规范范围管理-输入：" class="headerlink" title="规范范围管理-输入："></a>规范范围管理-输入：</h6><ol>
+<li>项目章程</li>
+<li>项目管理计划</li>
+<li>事业环境因素<ul>
+<li>组织内部的事业环境因素<ul>
+<li>组织文化、结构和治理</li>
+<li>设施和资源的物理分布</li>
+<li>基础设施</li>
+<li>信息技术软件</li>
+<li>资源可用性</li>
+<li>员工能力</li>
+</ul>
+</li>
+<li>组织外部的事业环境因素<ul>
+<li>市场条件</li>
+<li>社会和文化影响因素</li>
+<li>监管环境</li>
+<li>商业数据库</li>
+<li>学术研究</li>
+<li>行业标准</li>
+<li>财考虑因素</li>
+<li>物理环境因素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组织过程资产<ul>
+<li>安保和安全</li>
+<li>治理文件</li>
+<li>数据资产</li>
+<li>过程资产</li>
+<li>知识资产</li>
+</ul>
+</li>
+</ol>
+<h6 id="规范范围管理-工具与技术"><a href="#规范范围管理-工具与技术" class="headerlink" title="规范范围管理-工具与技术"></a>规范范围管理-工具与技术</h6><ol>
+<li>专家判断</li>
+<li>数据分析</li>
+<li>会议</li>
+</ol>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309032142013.png" alt="image-20230903214250961"></p>
+<h6 id="规范范围管理-输出"><a href="#规范范围管理-输出" class="headerlink" title="规范范围管理-输出"></a>规范范围管理-输出</h6><ol>
+<li><p><strong>范围管理计划</strong></p>
+<p>定义：</p>
+<p>范围管理计划是项目管理的组成部分，描述将如何定义、制定、监督、就控制和确认项目范围。</p>
+<p>作用：</p>
+<p>指导如下过程和相关工作</p>
+<ul>
+<li>制定项目范围说明书</li>
+<li>根据详细项目范围说明书创建WBS</li>
+<li>确定如何审批和维护范围基准</li>
+<li>正式验收已完成的项目可交付成果</li>
+</ul>
+<p>特征：</p>
+<p>范围管理计划可以是正式的或非常是的，非常详细或高度概括的。</p>
+</li>
+<li><p><strong>需求管理计划</strong></p>
+<p>定义：</p>
+<p>需求管理计划是项目管理计划的组成部分，描述如何分析、记录和管理需求。</p>
+<p>主要内容：</p>
+<ul>
+<li>如何规划、跟踪和报告各种需求活动</li>
+<li>管理活动</li>
+<li>需求优先级排序过程</li>
+<li>测量指标及使用这些指标的理由</li>
+<li>反映那些需求属性江北列出跟踪矩阵等</li>
+</ul>
+</li>
+</ol>
+<h4 id="二、收集需求"><a href="#二、收集需求" class="headerlink" title="二、收集需求"></a>二、收集需求</h4><h6 id="定义：-2"><a href="#定义：-2" class="headerlink" title="定义："></a>定义：</h6><p>收集需求是为实现目标而确定，记录并管理干系人的需要和需求的过程。</p>
+<h6 id="本过程的主要作用：-1"><a href="#本过程的主要作用：-1" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><p>是为定义产品范围和项目范围奠定基础。</p>
+<h6 id="开展频率：-1"><a href="#开展频率：-1" class="headerlink" title="开展频率："></a>开展频率：</h6><p>本过程仅开展一次或仅在项目的预定义点开展。</p>
+<h6 id="收集需求-输入"><a href="#收集需求-输入" class="headerlink" title="收集需求-输入"></a>收集需求-输入</h6><ol>
+<li>立项管理文件</li>
+<li>项目章程</li>
+<li>项目管理计划<ul>
+<li>范围管理计划</li>
+<li>需求管理计划</li>
+<li>干系人参与计划</li>
+</ul>
+</li>
+<li>项目文件<ul>
+<li>假设日志</li>
+<li>干系人登记册</li>
+<li>经验教训登记册</li>
+</ul>
+</li>
+<li>协议</li>
+<li>事业环境因素<ol>
+<li>组织内部事业环境因素</li>
+<li>组织外部事业环境因素</li>
+</ol>
+</li>
+<li>组织过程资产<ol>
+<li>过程资产</li>
+<li>治理文件</li>
+<li>数据资产</li>
+<li>知识资产</li>
+<li>安保和安全</li>
+</ol>
+</li>
+</ol>
+<h6 id="收集需求-工具与技术"><a href="#收集需求-工具与技术" class="headerlink" title="收集需求-工具与技术"></a>收集需求-工具与技术</h6><ol>
+<li><p>专家判断</p>
+</li>
+<li><p>数据收集</p>
+<ul>
+<li>访谈</li>
+<li>头脑风暴</li>
+<li>焦点小组</li>
+<li>问卷调查</li>
+<li>标杆对照<ul>
+<li>将实际或计划的产品、过程和时间，与其他科比组织得的实践进行比较，以便识别最佳实践，形成改进意见，并为绩效考核提供依据。</li>
+<li>标杆对照所采用的科比组织可以是内部的，也可以是外部的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据分析</p>
+<ul>
+<li>文件分析：文件分析指审核和评估任何相关的文件信息。</li>
+</ul>
+</li>
+<li><p>决策</p>
+<ul>
+<li>投票</li>
+<li>独裁型决策制定</li>
+<li>多标准决策分析</li>
+</ul>
+</li>
+<li><p>数据表现</p>
+<ul>
+<li>亲和图：用来对大量创意进行分组的技术，以便进一步审查和分析。</li>
+<li>思维导图：把从头脑风暴中获得的创意整合成一张图，用于反映创意之间的共性与差异，激发新创意。</li>
+</ul>
+</li>
+<li><p>人际关系与团队技能</p>
+<ol>
+<li><p><strong>名义小组技术</strong></p>
+<p>用于促进头脑风暴的一种技术，通过投票排列最有用的创意，以便进一步开展头脑风暴或优先顺序。</p>
+<p>四个步骤：</p>
+<ol>
+<li>向集体提出一个问题或难题，每个人在深思后写出自己的想法；</li>
+<li>主持人在活动挂图上记录所有人的想法；</li>
+<li>集体讨论各个想法，指导全体成员达成一个明确的共识；</li>
+<li>个人私下投票决出各个想法的优先顺序，通常采用5分制，1分最低，5分最高。</li>
+</ol>
+</li>
+<li><p>观察和交谈：指直接察看个人在各自的环境中如何执行工作（或任务）和实施流程。</p>
+</li>
+<li><p>引导：引导与主题研讨会结合使用，把主要干系人着急在一起定义产品需求。研讨会可用于快速定义跨职能需求并协调干系人的需求差异。</p>
+</li>
+</ol>
+</li>
+<li><p>系统交互图：系统交互图是对产品范围的可视化描述，可以直观显示业务系统（过程、设备、计算机系统等）以及 与人和其他系统（行动者）之间的交互方式。</p>
+</li>
+<li><p>原型法</p>
+<ul>
+<li>原型法是指在实际制造预期产品之前，先早出该产品的模型，并据此征求对需求的早起反馈。</li>
+<li>故事板：是一种原型技术，通过一系列的图像或图示来展示顺序或导航路径。</li>
+</ul>
+</li>
+</ol>
+<h6 id="收集需求-输出"><a href="#收集需求-输出" class="headerlink" title="收集需求-输出"></a>收集需求-输出</h6><ol>
+<li><p>需求文件</p>
+<p>定义：</p>
+<p>需求文件描述各种单一需求将如何满足项目相关的业务需求。</p>
+<p>作为基准需求的特征：</p>
+<p>有明确的（可测量的可测试的）、可跟踪的、完整的、相互协调的，且干系人愿意认可的需求，才能作为基准</p>
+<p>需求的类别：</p>
+<ol>
+<li><p>业务需求</p>
+<p>整个组织的高层级需要，例如，解决业务问题或抓住业务机会，以及实施项目的原因。</p>
+</li>
+<li><p>干系人需求</p>
+<p>干系人的需要。</p>
+</li>
+<li><p>解决方案需求（系统需求）</p>
+<p>为满足业务需求和干系人需求，产品、服务或成果必须具备的特性、功能和特征。</p>
+<p>分为：功能需求和非功能需求。</p>
+<p>功能需求：描述产品应具备的功能。例如：产品应该执行的行动、流程、数据和交互；</p>
+<p>非功能需求：是对功能需求的补充，是产品正常运行所需的环境条件或质量要求。例如：可靠性、保密性、性能、安全性、服务水平、可支持性、保留或清除等。</p>
+</li>
+<li><p>过度和就绪需求</p>
+<p>如数据转换和培训需求。这些需求描述了从当前状态过渡到将来状态所需的临时能力。</p>
+</li>
+<li><p>项目需求</p>
+<p>项目需要满足的行动、过程或其他条件，例如：里程碑日期、合同责任、制约因素等</p>
+</li>
+<li><p>质量需求</p>
+<p>用于确认项目可交付成果的成功完成或其他项目需求的实现的任何条件或标准。例如：测试、认证、确认等</p>
+</li>
+</ol>
+</li>
+<li><p>需求跟踪矩阵</p>
+<p>定义：</p>
+<p>需求跟踪矩阵是把产品需求从其来源连接到能够满足需求的可交付成果的一种表格。</p>
+<p>内容：</p>
+<ol>
+<li>业务需要、机会、目的和目标</li>
+<li>项目目标</li>
+<li>项目范围和WBS可交付成果</li>
+<li>产品设计</li>
+<li>产品开发</li>
+<li>测试策略和测试场景</li>
+<li>高层级需求到详细需求等</li>
+</ol>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309032226642.png" alt="image-20230903222628535"></p>
+</li>
+</ol>
+<h4 id="三、定义范围"><a href="#三、定义范围" class="headerlink" title="三、定义范围"></a>三、定义范围</h4><h6 id="定义：-3"><a href="#定义：-3" class="headerlink" title="定义："></a>定义：</h6><p>定义范围是制定项目和产品详细描述的过程。</p>
+<h6 id="本过程的主要作用：-2"><a href="#本过程的主要作用：-2" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><p>是描述产品、服务或成果的边界和验收标准。</p>
+<h6 id="开展频率：-2"><a href="#开展频率：-2" class="headerlink" title="开展频率："></a>开展频率：</h6><p>在整个项目期间多次反复开展。</p>
+<h6 id="定义范围-输入"><a href="#定义范围-输入" class="headerlink" title="定义范围-输入"></a>定义范围-输入</h6><ol>
+<li>项目章程</li>
+<li>项目管理计划</li>
+<li>项目文件<ul>
+<li>假设日志</li>
+<li>需求文件</li>
+<li>风险登记册</li>
+</ul>
+</li>
+<li>事业环境因素</li>
+<li>组织过程资产</li>
+</ol>
+<h6 id="定义范围-工具与技术"><a href="#定义范围-工具与技术" class="headerlink" title="定义范围-工具与技术"></a>定义范围-工具与技术</h6><ol>
+<li>专家判断</li>
+<li>数据分析<ul>
+<li>备选方案分析：用于评估实现项目章程中所述的需求和目标的各种方法。</li>
+</ul>
+</li>
+<li>决策<ul>
+<li>多标准决策分析</li>
+</ul>
+</li>
+<li>人际关机与团队技能<ul>
+<li>引导</li>
+</ul>
+</li>
+<li>产品分析<ul>
+<li>可用于产品和服务，包括针对产品或服务提问并回答，以描述要交付产品的用途、特征及其他方面。</li>
+</ul>
+</li>
+</ol>
+<h6 id="定义范围-输出"><a href="#定义范围-输出" class="headerlink" title="定义范围-输出"></a>定义范围-输出</h6><ol>
+<li><p>项目范围说明书</p>
+<p>定义：项目范围说明书是对项目范围、可交付成果、假设条件和制约因素的描述。</p>
+<p>内容：</p>
+<ul>
+<li>产品范围描述：逐步细化在项目章程和需求文件中所述的产品、服务或成果特征。</li>
+<li>可交付成果：为完成某一过程、阶段或项目而必须产出的任何独特并可交付的产品、服务或成果能力，可交付成果也包括：各种辅助成果，如项目管理报告和文件。</li>
+<li>验收标准：可交付成果验收前必须满足的一系列条件。</li>
+<li>项目的除外责任：识别排除在项目之外的内容。</li>
+</ul>
+<p><strong>注意-项目范围说明书与项目正常的区别</strong></p>
+<ul>
+<li>虽然项目章程和项目范围说明书的内容存在一定程度的重叠，但它们的详细程度完全不同。</li>
+<li>项目章程包含高层级的信息，而项目范围说明书则是对范围组成部分的详细描述，这些组成部分需要在项目过程中渐进明细。</li>
+</ul>
+</li>
+<li><p>项目文件（更新）</p>
+</li>
+</ol>
+<h4 id="四、创建WBS"><a href="#四、创建WBS" class="headerlink" title="四、创建WBS"></a>四、创建WBS</h4><h6 id="定义：-4"><a href="#定义：-4" class="headerlink" title="定义："></a>定义：</h6><p>创建工作分解结构（WBS）是把项目可交付成果和项目工作分解成较小、更易于管理的组件的过程。</p>
+<h6 id="本过程的主要作用：-3"><a href="#本过程的主要作用：-3" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><p>为所要交付的内容提供架构</p>
+<h6 id="开展频率：-3"><a href="#开展频率：-3" class="headerlink" title="开展频率："></a>开展频率：</h6><p>它仅开展一次或仅在项目的预定义点开展。</p>
+<h6 id="工作包："><a href="#工作包：" class="headerlink" title="工作包："></a>工作包：</h6><p>WBS最底层的组成部分成为工作包，其中包括计划的工作。</p>
+<h6 id="创建WBS-输入"><a href="#创建WBS-输入" class="headerlink" title="创建WBS-输入"></a>创建WBS-输入</h6><ol>
+<li>项目管理计划</li>
+<li>项目文件：需求文件、项目范围说明书</li>
+<li>事业环境因素</li>
+<li>组织过程资产</li>
+</ol>
+<h6 id="创建WBS-工具与技术"><a href="#创建WBS-工具与技术" class="headerlink" title="创建WBS-工具与技术"></a>创建WBS-工具与技术</h6><ol>
+<li><p>专家判断</p>
+</li>
+<li><p>分析</p>
+<p>定义：分解是一种把项目范围和项目可交付成果逐步划分为更小，更便于管理的组成部分的技术。</p>
+<p>创建WBS的方法：</p>
+<ul>
+<li>自上而下的方法</li>
+<li>使用组织特定的指南</li>
+<li>使用WBS模板</li>
+</ul>
+<p>分解活动的分解步骤</p>
+<ol>
+<li>识别和分析可交付成果及相关工作（看那些东西需要分析）</li>
+<li>确定WBS的结构和编排方法（怎么分解）</li>
+<li>自上而下逐层细化分解（分解）</li>
+<li>为WBS组成部分制定和分配标识编码（编码）</li>
+<li>核实可交付成果分解的程度是否恰当（检查下看看有没有错误的）</li>
+</ol>
+<p>WBS结构：</p>
+<ol>
+<li>生命周期作为第2层<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309042131042.png" alt="image-20230904213130970"></li>
+<li>可交付成果作为第2层<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202309042134126.png" alt="image-20230904213404061"></li>
+<li>包含外包工作：纳入由团队以外的组织开发的各种较低层组件（如外包工作）。随后，作为外包工作的一部分，卖方须制定相应的合同WBS。</li>
+<li>滚动式规划：要在未来元气才完成的可交付成果或组件，当前可能无法分解。项目管理团队因而通常需要等待对该可交付成果或组成部分达成一致意见，才能够制定出WBS中的相应细节。</li>
+</ol>
+<p>注意事项：</p>
+<ol>
+<li>WBS必须是面向可交付成果的。</li>
+<li>WBS必须符合项目的范围：WBS必须包括也仅包括为了完成项目的可交付成果的活动。</li>
+<li>WBS的底层应该支持计划和控制</li>
+<li>WBS的元素必须有入负责，而且只有一个人负责</li>
+<li>WBS应控制在4~6层</li>
+<li>WBS应包括项目管理工作（因为管理是项目具体工作的一部分），也要包括分包出去的工作。</li>
+<li>WBS的编制需要所有（主要）项目干系人的参与</li>
+<li>WBS并非是一成不变的。</li>
+</ol>
+</li>
+</ol>
+<h6 id="创建WBS-输出"><a href="#创建WBS-输出" class="headerlink" title="创建WBS-输出"></a>创建WBS-输出</h6><ol>
+<li><p>范围基准</p>
+<p>定义：</p>
+<p>范围基准是经过批准的范围说明书、WBS和相应的WBS词典，只有通过正式的变更控制程序才能进行变更，它被用作比较的基础。</p>
+<p>其他概念：</p>
+<ol>
+<li><p>项目范围说明书</p>
+</li>
+<li><p>WBS</p>
+</li>
+<li><p>工作包</p>
+<ul>
+<li>控制账户：每个工作包都是控制账户的一部分，而控制账户则是一个管理控制点。在该控制点上，把范围、预算和进度加以整合，并于挣值相比较来测量绩效。</li>
+<li>工作包与控制账号的关系：控制账户包含两个或更多工作包，每个工作包只有一个控制账户关联。</li>
+</ul>
+</li>
+<li><p>规划包</p>
+<p>规划包是一种低于控制账户而高于工作包的工作分解结构组件，工作内容已知，但详细的进度活动未知，一个控制账户可以包含一个或多个规划包。</p>
+</li>
+<li><p>WBS字典</p>
+<p>WBS字典是针对WBS中的每个组件，详细描述可交付成果、活动和进度信息的文件。</p>
+</li>
+</ol>
+</li>
+<li><p>项目文件（更新）</p>
+<ol>
+<li>假设日志</li>
+<li>需求文件</li>
+</ol>
+</li>
+</ol>
+<h4 id="五、确认范围"><a href="#五、确认范围" class="headerlink" title="五、确认范围"></a>五、确认范围</h4><h6 id="定义：-5"><a href="#定义：-5" class="headerlink" title="定义："></a>定义：</h6><p>确认范围是正式验收已完成的项目可交付成果的过程。</p>
+<h6 id="本过程的主要作用：-4"><a href="#本过程的主要作用：-4" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><ol>
+<li>是验收过程具有客观性</li>
+<li>通过确认每个可交付成果来提高最终产品、服务或成果获得验收的可能性</li>
+</ol>
+<h6 id="开展频率"><a href="#开展频率" class="headerlink" title="开展频率"></a>开展频率</h6><p>需要再整个项目期间定期开展</p>
+<h6 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h6><ol>
+<li><p>确认范围的步骤</p>
+<p>确认范围步骤</p>
+<ol>
+<li>确认需要进行范围确认的时间</li>
+<li>识别范围确认需要哪些投入</li>
+<li>确认范围正式被接受的标准和要素</li>
+<li>确定范围确认会议的组织步骤</li>
+<li>组织范围确认会议</li>
+</ol>
+<p>与质量控制的区别</p>
+<ol>
+<li>确认范围关注可交付成果的验收</li>
+<li>质量控制关注可交付成果的正确性及是否满足质量要求</li>
+<li>控制质量过程通常先于确认范围过程，但二者也可以同时进行。</li>
+</ol>
+</li>
+<li><p>需要检查的问题</p>
+<ol>
+<li>可交付成果是否确定的、可确认的</li>
+<li>每个可交付成果是否有明确的里程碑，里程碑是否有明确的、可辨别的时间、例如：客户的书面认可等</li>
+<li>是否有明确的质量标准</li>
+<li>审核和承诺是否有清晰的表达</li>
+<li>项目范围是否覆盖了需要完成的产品或服务的所有活动，有没有遗漏或错误</li>
+<li>项目范围的风险是否太高</li>
+</ol>
+</li>
+<li><p>干系人关注点的不同</p>
+<ol>
+<li><p>管理层主要关注项目范围</p>
+<p>是指范围对项目的进度、资金和资源的影响，这些因素是否超过了组织承受范围，是否在投入产出上具有合理性。</p>
+</li>
+<li><p>客户主要关注产品范围</p>
+<p>关心项目的可交付成果是否足够完成产品或服务</p>
+</li>
+<li><p>项目管理人员主要关注项目制约因素</p>
+<p>关心可交付成果是否足够和必须完成，时间、资金和资源是否足够，主要的潜在风险和预备解决方法</p>
+</li>
+<li><p>项目团队成员主要关注项目范围中自己参与的元素和负责的元素</p>
+<p>通过定义范围中的时间检查自己的工作时间是否足够，自己在项目范围中是否有多项工作，而这些工作是否有冲突的地方。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>  </p>
+<h6 id="确认范围-输入"><a href="#确认范围-输入" class="headerlink" title="确认范围-输入"></a>确认范围-输入</h6><ol>
+<li><p>项目管理计划</p>
+<ol>
+<li>范围管理计划</li>
+<li>需求管理计划</li>
+<li>范围基准</li>
+</ol>
+</li>
+<li><p>项目文件</p>
+<ol>
+<li>需求文件</li>
+<li>需求跟踪矩阵</li>
+<li>质量报告</li>
+<li>经验教训登记册</li>
+</ol>
+</li>
+<li><p>工作绩效数据</p>
+</li>
+<li><p>核实的可交付成果</p>
+<p>核实的可交付成果是指已经完成，并被控制质量过程检查为正确的可交付成果。</p>
+</li>
+</ol>
+<h6 id="确认范围-工具与技术"><a href="#确认范围-工具与技术" class="headerlink" title="确认范围-工具与技术"></a>确认范围-工具与技术</h6><ol>
+<li><p>检查</p>
+<p>检查是指开展测量、审查与确认等活动，来判断工作和可交付成果是否符合需求和产品验收标准。检查有时也被称为审查、产品审查和巡检等。</p>
+</li>
+<li><p>决策</p>
+<p>可用于确定范围过程决策技术是投票，当由项目团队和其他干系人进行验收时，使用投票来形成结论。</p>
+</li>
+</ol>
+<h6 id="确认范围-输出"><a href="#确认范围-输出" class="headerlink" title="确认范围-输出"></a>确认范围-输出</h6><ol>
+<li><p>验收的可交付成果</p>
+<p>符合验收标准的可交付成果应由客户或发起人正式签字批准。</p>
+</li>
+<li><p>变更请求</p>
+<p>对已经完成但未通过正式验收的可交付成果及其未通过验收的原因，应该记录案。</p>
+</li>
+<li><p>工作绩效信息</p>
+<p>工作绩效信息包括项目进展信息，例如：哪些可交付成果已经被验收，哪些未通过验收以及原因。</p>
+</li>
+<li><p>项目文件（更新）</p>
+<ol>
+<li>需求文件</li>
+<li>需求跟踪矩阵</li>
+<li>经验教训登记册</li>
+</ol>
+</li>
+</ol>
+<h4 id="六、控制范围"><a href="#六、控制范围" class="headerlink" title="六、控制范围"></a>六、控制范围</h4><h6 id="定义：-6"><a href="#定义：-6" class="headerlink" title="定义："></a>定义：</h6><p>控制范围是监督项目和产品的范围状态，管理范围基准变更的过程。</p>
+<h6 id="本过程的主要作用：-5"><a href="#本过程的主要作用：-5" class="headerlink" title="本过程的主要作用："></a>本过程的主要作用：</h6><p>是在整个项目期间保持对范围基准的维护。</p>
+<h6 id="开展频率：-4"><a href="#开展频率：-4" class="headerlink" title="开展频率："></a>开展频率：</h6><p>本过程需要在整个项目期间开展。</p>
+<h6 id="范围蔓延："><a href="#范围蔓延：" class="headerlink" title="范围蔓延："></a>范围蔓延：</h6><p>未经控制的产品或项目范围的扩大（未对时间、成本和资源做出相应调整）被称为范围蔓延。</p>
+<h6 id="控制范围-输入："><a href="#控制范围-输入：" class="headerlink" title="控制范围-输入："></a>控制范围-输入：</h6><ol>
+<li>项目管理计划</li>
+<li>项目文件</li>
+<li>工作绩效数据</li>
+<li>事业环境因素</li>
+<li>组织过程资产</li>
+</ol>
+<h6 id="控制范围-工具与技术："><a href="#控制范围-工具与技术：" class="headerlink" title="控制范围-工具与技术："></a>控制范围-工具与技术：</h6><ol>
+<li>数据分析：<ol>
+<li>偏差分析：用于基准与实际结果进行比较，以确定偏差是否处开临界值区间内或是否有必要采取纠正或预防措施。</li>
+<li>趋势分析：旨在审查项目绩效随时间的变化情况，以判断绩效是正在改着还是正在恶化。</li>
+</ol>
+</li>
+</ol>
+<h6 id="控制范围-输出："><a href="#控制范围-输出：" class="headerlink" title="控制范围-输出："></a>控制范围-输出：</h6><ol>
+<li>工作绩效信息</li>
+<li>变更请求</li>
+<li>项目管理计划（更新）</li>
+<li>项目文件（更新）</li>
+</ol>
+<h2 id="练一练"><a href="#练一练" class="headerlink" title="练一练"></a>练一练</h2><ol>
+<li><p>在（）生命周期中，项目开始时就对项目可交付成果进行定义，对任何范围变化都要进行变更管理。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 预测型</li>
+<li><input disabled="" type="checkbox"> 适应型</li>
+<li><input disabled="" type="checkbox"> 敏捷型</li>
+<li><input disabled="" type="checkbox"> 迭代型</li>
+</ul>
+<blockquote>
+<p>预测型：瀑布型</p>
+</blockquote>
+</li>
+<li><p>（）不是规划范围管理过程的输入。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 项目章程</li>
+<li><input disabled="" type="checkbox"> 项目管理计划</li>
+<li><input disabled="" type="checkbox"> 质量管理计划</li>
+<li><input checked="" disabled="" type="checkbox"> 需求管理计划</li>
+</ul>
+</li>
+<li><p>关于需求的理解，不正确的（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 让干系人积极参与需求的探索和分解工作，并仔细确定、记录和管理对产品、服务或成果的需求，能直接促进项目成功</li>
+<li><input checked="" disabled="" type="checkbox"> 为更好地对项目进行了解，收集需求的过程应在整个项目期间定期开展</li>
+<li><input disabled="" type="checkbox"> 需求是指根据特定协议或其他强制性规范，产品、服务或成果必须具备的条件或能力</li>
+<li><input disabled="" type="checkbox"> 需求包括发起人、客户和其他干系人的己量化且书面记录的需要和期望</li>
+</ul>
+</li>
+<li><p>数据收集技术中，（）将实际或计划的产品、过程和实践，与其他可比组织的实践进行比较，以便识别最佳实践，形成改进意见，并为绩效考核提供依据。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 头脑风暴</li>
+<li><input disabled="" type="checkbox"> 焦点小组</li>
+<li><input disabled="" type="checkbox"> 亲和图</li>
+<li><input checked="" disabled="" type="checkbox"> 标杆对比</li>
+</ul>
+</li>
+<li><p>（）是把产品需求从其来源连接到能满虽需求的可交付成果的一种表格。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 系统交互图</li>
+<li><input disabled="" type="checkbox"> 决策矩阵</li>
+<li><input checked="" disabled="" type="checkbox"> 需求跟踪矩阵</li>
+<li><input disabled="" type="checkbox"> uc矩阵</li>
+</ul>
+</li>
+<li><p>应根据（）来编制详细的项目范围说明书。</p>
+<ol>
+<li>可交付成果</li>
+<li>假设条件</li>
+<li>制约因素</li>
+<li>WBS</li>
+<li><input checked="" disabled="" type="checkbox"> 123</li>
+<li><input disabled="" type="checkbox"> 124</li>
+<li><input disabled="" type="checkbox"> 134</li>
+<li><input disabled="" type="checkbox"> 234</li>
+</ol>
+<blockquote>
+<p>根据详细的项目范围说明书来确定wbs。</p>
+</blockquote>
+</li>
+<li><p>关于项目范围说明书的理解，不正确的是（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 项目范围说明书可明确指出哪些工作不属于本项目范围</li>
+<li><input disabled="" type="checkbox"> 项目范围说明书使项目团队能进行更详细的规划，并为评价变更请求或额外工作是否超过项目边界提供基准</li>
+<li><input disabled="" type="checkbox"> 项目范围说明书描述要做和不要做的工作的详细程度，决定着项目管理团队控制整个项目范围的有效程度</li>
+<li><input disabled="" type="checkbox"> 项目范围说明书不能代表项目干系人之间就项目范围所达成的共识</li>
+</ul>
+</li>
+<li><p>范围基准包括（）。</p>
+<ol>
+<li>经过批准的范围说明书</li>
+<li>项目章程</li>
+<li>wbs词典</li>
+<li>wbs</li>
+<li>项目管理计划</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> 125</li>
+<li><input disabled="" type="checkbox"> 124</li>
+<li><input checked="" disabled="" type="checkbox"> 134</li>
+<li><input disabled="" type="checkbox"> 145</li>
+</ul>
+</li>
+<li><p>（）用于确认项目可交付成果的成功完成。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 业务需求</li>
+<li><input disabled="" type="checkbox"> 解决方案需求</li>
+<li><input checked="" disabled="" type="checkbox"> 质量需求</li>
+<li><input disabled="" type="checkbox"> 过渡与就绪需求</li>
+</ul>
+<blockquote>
+<p>功能属于质量需求</p>
+</blockquote>
+</li>
+<li><p>关于确认范围的描述，不正确的是（）。</p>
+<ul>
+<li><input disabled="" type="checkbox"> 确认范围的作用之一是确保验收过程具有客观性</li>
+<li><input checked="" disabled="" type="checkbox"> 确认范围过程通常先于控制质量过程，二者也可同时进行</li>
+<li><input disabled="" type="checkbox"> 在确认范围时，要检查可交付成果是否有明确的质量标准</li>
+<li><input disabled="" type="checkbox"> 管理层、客户、项目管理人员在确认范围的关注点有所不同</li>
+</ul>
+</li>
+<li><p>关于wbs的描述，正确的是（）。</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> WBS中的各项工作为可交付成果提供服务</li>
+<li><input disabled="" type="checkbox"> WBS的内容一般会超出完成可交付成果的活动范围</li>
+<li><input disabled="" type="checkbox"> WBS的元素可以由一人或多人负责</li>
+<li><input disabled="" type="checkbox"> WBS应包括分包的工作，但不包括管理工作</li>
+</ul>
+</li>
+</ol>
+<h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><ol>
+<li><p>请简述确认范围过程与控制质量过程的不同之处。</p>
+<p>答：</p>
+<ol>
+<li><p>关注点不一样</p>
+<p>确认范围过程关注的验收，</p>
+<p>控制质量过程关注的是可交付成果是否满足项目的质量要求</p>
+</li>
+<li><p>一般是先做确认范围过程，再做控制质量过程，两者也可同时进行。</p>
+</li>
+</ol>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/">http://example.com/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/">知识小结</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/09/08/14.%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="进度管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124678.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">进度管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/03/30.%E7%AE%A1%E7%90%86%E7%A7%91%E5%AD%A6-%E4%B8%8B/" title="管理科学-下"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124667.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">管理科学-下</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/10/06/00.%E8%80%83%E5%89%8D%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/" title="必备知识"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124670.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-06</div><div class="info-item-2">必备知识</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/27/10.%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9%E7%AE%A1%E7%90%86/" title="项目立项管理"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124693.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-27</div><div class="info-item-2">项目立项管理</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/" title="项目整合管理-上集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-29</div><div class="info-item-2">项目整合管理-上集</div></div><div class="info-2"><div class="info-item-1">  会出现的论文里面 项目整合管理定义：包括识别、定义、组合、统一和协调项目管理过程组的各个过程和项目管理活动。 重要性：整合管理兼具统一、合并、沟通和建立联系的性质，项目整合管理贯穿项目始终。 目标：  资源分配 平衡竟争性需求 研究各种备选方法 裁剪过程以实现项目目标 管理各个项目管理知识领域之间的依赖关系  管理基础执行整合，项目整合管理的责任不能被授权或转移，项目经理必须对整个项目承担最终责任。 整合包括：  过程层面执行整合 认知层面执行整合 背景层面执行整合  整合管理的复杂性项目的复杂性来源于组织的系统行为、人类行为以及组织或环境中的不确定性。 复杂性的含义：  包含多个部分 不同部分之间存在一系列的关联 不同部分之间的动态交互作用 这些义互作用所产生的行为远远大于各部分简单的相加（例如突发性行为）。  项目管理计划和项目文件项目管理过程中，会使用并存产生两大类文件：一是项目管理计划；二是项目文件。...</div></div></div></a><a class="pagination-related" href="/2023/09/03/12.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8B/" title="项目整合管理-下集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124707.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-03</div><div class="info-item-2">项目整合管理-下集</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/08/14.%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="进度管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124678.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-08</div><div class="info-item-2">进度管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/09/15.%E9%A1%B9%E7%9B%AE%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" title="项目成本管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124728.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-09</div><div class="info-item-2">项目成本管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">范围管理</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%9A"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">范围管理的基础：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%BF%87%E7%A8%8B"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">项目范围管理过程</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B%E6%A6%82%E8%BF%B0%EF%BC%8C6%E4%B8%AA%E8%BF%87%E7%A8%8B-%E8%A7%84%E8%8C%83%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">过程概述，6个过程- 规范范围管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E7%9A%84%E5%85%AD%E4%B8%AA%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">范围管理的六个过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%A7%84%E8%8C%83%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86"><span class="toc-number">3.0.1.</span> <span class="toc-text">一、规范范围管理</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-1"><span class="toc-number">3.0.1.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">3.0.1.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87%EF%BC%9A"><span class="toc-number">3.0.1.0.3.</span> <span class="toc-text">开展频率：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86-%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="toc-number">3.0.1.0.4.</span> <span class="toc-text">规范范围管理-输入：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">3.0.1.0.5.</span> <span class="toc-text">规范范围管理-工具与技术</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.1.0.6.</span> <span class="toc-text">规范范围管理-输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%94%B6%E9%9B%86%E9%9C%80%E6%B1%82"><span class="toc-number">3.0.2.</span> <span class="toc-text">二、收集需求</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-2"><span class="toc-number">3.0.2.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A-1"><span class="toc-number">3.0.2.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87%EF%BC%9A-1"><span class="toc-number">3.0.2.0.3.</span> <span class="toc-text">开展频率：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E9%9C%80%E6%B1%82-%E8%BE%93%E5%85%A5"><span class="toc-number">3.0.2.0.4.</span> <span class="toc-text">收集需求-输入</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E9%9C%80%E6%B1%82-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">3.0.2.0.5.</span> <span class="toc-text">收集需求-工具与技术</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E9%9C%80%E6%B1%82-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.2.0.6.</span> <span class="toc-text">收集需求-输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4"><span class="toc-number">3.0.3.</span> <span class="toc-text">三、定义范围</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-3"><span class="toc-number">3.0.3.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A-2"><span class="toc-number">3.0.3.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87%EF%BC%9A-2"><span class="toc-number">3.0.3.0.3.</span> <span class="toc-text">开展频率：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%85%A5"><span class="toc-number">3.0.3.0.4.</span> <span class="toc-text">定义范围-输入</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">3.0.3.0.5.</span> <span class="toc-text">定义范围-工具与技术</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.3.0.6.</span> <span class="toc-text">定义范围-输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%9B%E5%BB%BAWBS"><span class="toc-number">3.0.4.</span> <span class="toc-text">四、创建WBS</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-4"><span class="toc-number">3.0.4.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A-3"><span class="toc-number">3.0.4.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87%EF%BC%9A-3"><span class="toc-number">3.0.4.0.3.</span> <span class="toc-text">开展频率：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%85%EF%BC%9A"><span class="toc-number">3.0.4.0.4.</span> <span class="toc-text">工作包：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAWBS-%E8%BE%93%E5%85%A5"><span class="toc-number">3.0.4.0.5.</span> <span class="toc-text">创建WBS-输入</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAWBS-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">3.0.4.0.6.</span> <span class="toc-text">创建WBS-工具与技术</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAWBS-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.4.0.7.</span> <span class="toc-text">创建WBS-输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%A1%AE%E8%AE%A4%E8%8C%83%E5%9B%B4"><span class="toc-number">3.0.5.</span> <span class="toc-text">五、确认范围</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-5"><span class="toc-number">3.0.5.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A-4"><span class="toc-number">3.0.5.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87"><span class="toc-number">3.0.5.0.3.</span> <span class="toc-text">开展频率</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">3.0.5.0.4.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%A1%AE%E8%AE%A4%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%85%A5"><span class="toc-number">3.0.5.0.5.</span> <span class="toc-text">确认范围-输入</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%A1%AE%E8%AE%A4%E8%8C%83%E5%9B%B4-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">3.0.5.0.6.</span> <span class="toc-text">确认范围-工具与技术</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%A1%AE%E8%AE%A4%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.5.0.7.</span> <span class="toc-text">确认范围-输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%8E%A7%E5%88%B6%E8%8C%83%E5%9B%B4"><span class="toc-number">3.0.6.</span> <span class="toc-text">六、控制范围</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A-6"><span class="toc-number">3.0.6.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%EF%BC%9A-5"><span class="toc-number">3.0.6.0.2.</span> <span class="toc-text">本过程的主要作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87%EF%BC%9A-4"><span class="toc-number">3.0.6.0.3.</span> <span class="toc-text">开展频率：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E8%94%93%E5%BB%B6%EF%BC%9A"><span class="toc-number">3.0.6.0.4.</span> <span class="toc-text">范围蔓延：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%85%A5%EF%BC%9A"><span class="toc-number">3.0.6.0.5.</span> <span class="toc-text">控制范围-输入：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%8C%83%E5%9B%B4-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="toc-number">3.0.6.0.6.</span> <span class="toc-text">控制范围-工具与技术：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%8C%83%E5%9B%B4-%E8%BE%93%E5%87%BA%EF%BC%9A"><span class="toc-number">3.0.6.0.7.</span> <span class="toc-text">控制范围-输出：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B8%80%E7%BB%83"><span class="toc-number">4.</span> <span class="toc-text">练一练</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E7%AD%94%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">简答题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

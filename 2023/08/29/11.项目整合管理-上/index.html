@@ -1,0 +1,709 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>项目整合管理-上集 | 汤圆小记</title><meta name="author" content="汤圆"><meta name="copyright" content="汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="会出现的论文里面 项目整合管理定义：包括识别、定义、组合、统一和协调项目管理过程组的各个过程和项目管理活动。 重要性：整合管理兼具统一、合并、沟通和建立联系的性质，项目整合管理贯穿项目始终。 目标：  资源分配 平衡竟争性需求 研究各种备选方法 裁剪过程以实现项目目标 管理各个项目管理知识领域之间的依赖关系  管理基础执行整合，项目整合管理的责任不能被授权或转移，项目经理必须对整个项目承担最终">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目整合管理-上集">
+<meta property="og:url" content="http://example.com/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/index.html">
+<meta property="og:site_name" content="汤圆小记">
+<meta property="og:description" content="会出现的论文里面 项目整合管理定义：包括识别、定义、组合、统一和协调项目管理过程组的各个过程和项目管理活动。 重要性：整合管理兼具统一、合并、沟通和建立联系的性质，项目整合管理贯穿项目始终。 目标：  资源分配 平衡竟争性需求 研究各种备选方法 裁剪过程以实现项目目标 管理各个项目管理知识领域之间的依赖关系  管理基础执行整合，项目整合管理的责任不能被授权或转移，项目经理必须对整个项目承担最终">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg">
+<meta property="article:published_time" content="2023-08-29T00:54:44.000Z">
+<meta property="article:modified_time" content="2024-01-24T08:06:20.000Z">
+<meta property="article:author" content="汤圆">
+<meta property="article:tag" content="知识小结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '项目整合管理-上集',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://i.loli.net/2019/09/09/5oDRkWVKctx2b6A.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">汤圆小记</span></a><a class="nav-page-title" href="/"><span class="site-name">项目整合管理-上集</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">项目整合管理-上集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-29T00:54:44.000Z" title="发表于 2023-08-29 08:54:44">2023-08-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-24T08:06:20.000Z" title="更新于 2024-01-24 16:06:20">2024-01-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A7/">软考高级</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">6.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>19分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308272102298.png" alt="image-20230827210245191"></p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308272103927.png" alt="image-20230827210336849"></p>
+<p>会出现的论文里面</p>
+<h2 id="项目整合管理"><a href="#项目整合管理" class="headerlink" title="项目整合管理"></a>项目整合管理</h2><p>定义：包括识别、定义、组合、统一和协调项目管理过程组的各个过程和项目管理活动。</p>
+<p>重要性：整合管理兼具统一、合并、沟通和建立联系的性质，项目整合管理贯穿项目始终。</p>
+<p>目标：</p>
+<ul>
+<li>资源分配</li>
+<li>平衡竟争性需求</li>
+<li>研究各种备选方法</li>
+<li>裁剪过程以实现项目目标</li>
+<li>管理各个项目管理知识领域之间的依赖关系</li>
+</ul>
+<h4 id="管理基础"><a href="#管理基础" class="headerlink" title="管理基础"></a>管理基础</h4><p>执行整合，项目整合管理的责任不能被授权或转移，<strong>项目经理</strong>必须对整个项目承担最终责任。</p>
+<p>整合包括：</p>
+<ul>
+<li>过程层面执行整合</li>
+<li>认知层面执行整合</li>
+<li>背景层面执行整合</li>
+</ul>
+<h6 id="整合管理的复杂性"><a href="#整合管理的复杂性" class="headerlink" title="整合管理的复杂性"></a>整合管理的复杂性</h6><p>项目的复杂性来源于组织的系统行为、人类行为以及组织或环境中的不确定性。</p>
+<p>复杂性的含义：</p>
+<ul>
+<li>包含多个部分</li>
+<li>不同部分之间存在一系列的关联</li>
+<li>不同部分之间的动态交互作用</li>
+<li>这些义互作用所产生的行为远远大于各部分简单的相加（例如突发性行为）。</li>
+</ul>
+<h6 id="项目管理计划和项目文件"><a href="#项目管理计划和项目文件" class="headerlink" title="项目管理计划和项目文件"></a>项目管理计划和项目文件</h6><p>项目管理过程中，会使用并存产生两大类文件：<strong>一是项目管理计划；二是项目文件</strong>。 </p>
+<table>
+<thead>
+<tr>
+<th>项目管理计划</th>
+<th>项目文件</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>范围管理计划</td>
+<td>活动属性</td>
+<td>项目团队派工单</td>
+</tr>
+<tr>
+<td>需求管理计划</td>
+<td>活动清单</td>
+<td>质量控制测量结果</td>
+</tr>
+<tr>
+<td>进度管理计划</td>
+<td>假设日志</td>
+<td>质量测量指标</td>
+</tr>
+<tr>
+<td>成本管理计划</td>
+<td>估算依据</td>
+<td>质量报告</td>
+</tr>
+<tr>
+<td>质量管理计划</td>
+<td>变更日志</td>
+<td>需求文件</td>
+</tr>
+<tr>
+<td>资源管理计划</td>
+<td>成本估算</td>
+<td>需求跟踪矩阵</td>
+</tr>
+<tr>
+<td>沟通管理计划</td>
+<td>持续时间估算</td>
+<td>资源分解结构</td>
+</tr>
+<tr>
+<td>风险管理计划</td>
+<td>问题日志</td>
+<td>资源日历</td>
+</tr>
+<tr>
+<td>采购管理计划</td>
+<td>经验教训登记册</td>
+<td>资源需求</td>
+</tr>
+<tr>
+<td>干系人管理计划</td>
+<td>里程碑清单</td>
+<td>风险登记册</td>
+</tr>
+<tr>
+<td>变更管理计划</td>
+<td>物质资源分配单</td>
+<td>风险报告</td>
+</tr>
+<tr>
+<td>配置管理计划</td>
+<td>项目日历</td>
+<td>进度数据</td>
+</tr>
+<tr>
+<td>范围基准</td>
+<td>项目沟通记录</td>
+<td>进度预测</td>
+</tr>
+<tr>
+<td>进度基准</td>
+<td>项目进度计划</td>
+<td>干系人登记册</td>
+</tr>
+<tr>
+<td>成本基准</td>
+<td>项目进度网络图</td>
+<td>团队章程</td>
+</tr>
+<tr>
+<td>绩效测量基准</td>
+<td>项目范围说明书</td>
+<td>测试与评估文件</td>
+</tr>
+<tr>
+<td>项目生命周期描述</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>开发方法</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="项目整合管理过程"><a href="#项目整合管理过程" class="headerlink" title="项目整合管理过程"></a>项目整合管理过程</h2><p>十大管理都是发生在乙方。</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202401221443912.png" alt="image-20240122144336718"></p>
+<h4 id="过程概述"><a href="#过程概述" class="headerlink" title="过程概述"></a>过程概述</h4><h6 id="7个过程"><a href="#7个过程" class="headerlink" title="7个过程"></a>7个过程</h6><p>制定项目章程</p>
+<p>制订项目管理计划</p>
+<p>指导与管理项目工作</p>
+<p>管理项目知识</p>
+<p>监控项目工作</p>
+<p>实施整体变更控制</p>
+<p>结束项目或阶段</p>
+<h2 id="制定项目章程"><a href="#制定项目章程" class="headerlink" title="制定项目章程"></a>制定项目章程</h2><h6 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h6><p>制定项目章程是编写一份正式批准项目并授权项目经理在项目活动中使用组织资源的文件的过程。</p>
+<h6 id="本过程的作用："><a href="#本过程的作用：" class="headerlink" title="本过程的作用："></a>本过程的作用：</h6><ul>
+<li>明确项目与组织战略目标之间的直接联系</li>
+<li>确立项目的正式地位</li>
+<li>展示组织对项目的承诺</li>
+</ul>
+<h6 id="开展频率"><a href="#开展频率" class="headerlink" title="开展频率"></a>开展频率</h6><p>本过程仅开展一次或仅在项目的预定义时开展。</p>
+<h6 id="与需求之间建立"><a href="#与需求之间建立" class="headerlink" title="与需求之间建立"></a>与需求之间建立</h6><p>项目章程在项目执行和项目需求之间建立了联系。通过编制项目章程，来确认项目是否符合组织战略和日常运营的需要。</p>
+<h6 id="与合同的区别"><a href="#与合同的区别" class="headerlink" title="与合同的区别"></a>与合同的区别</h6><p><strong>项目章程不能当作合同</strong>，在执行外部项目时，通常需要用正式的合同来达成合作协议，项目章程用于建立组织内部的合作关系，确保正确交付合同内容。</p>
+<h6 id="为项目经理授权"><a href="#为项目经理授权" class="headerlink" title="为项目经理授权"></a>为项目经理授权</h6><p>项目章程授权项目经理进行项目管理过程中的规划、执行和控制，同时还授权项目经理在项目活动中使用组织资源。</p>
+<p>因此，应在规划开始之前任命项目经理，项目经理越早确认并任命越好，最好在制定项目章程时就任命。</p>
+<h6 id="编制人"><a href="#编制人" class="headerlink" title="编制人"></a>编制人</h6><p>项目章程可由发起人编制，也可由项目经理和发起机构合作编制。</p>
+<h6 id="重要标志"><a href="#重要标志" class="headerlink" title="重要标志"></a>重要标志</h6><p>项目章程一旦被批准，就标志着项目的正式启动。</p>
+<h6 id="项目启动人"><a href="#项目启动人" class="headerlink" title="项目启动人"></a>项目启动人</h6><p>项目由项目以外的机构来启动，例如发起人、项目集或项目管理办公室（PMO）、项目组合治理委员会主库或其授权代表。</p>
+<h4 id="制定项目章程-输入"><a href="#制定项目章程-输入" class="headerlink" title="制定项目章程-输入"></a>制定项目章程-输入</h4><p> <img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308272249116.png" alt="image-20230827224944029"></p>
+<h6 id="输入包括："><a href="#输入包括：" class="headerlink" title="输入包括："></a>输入包括：</h6><ol>
+<li><p>立项管理文件：立项管理阶段经批准的结果或相关的立项管理文件是用于制定项目章程的依据。</p>
+<p>注：这个是乙方的立项管理文件，不是之前讲的甲方的项目立项管理文件。</p>
+</li>
+<li><p>协议：协议有多种形式，包括合同、谅解备忘录（MOUs）、服务水平协议、协议书、意向书、口头协议或其它书面协议。</p>
+<p>注：对外客户做项目通常需要签订合同，对内项目为协议书</p>
+</li>
+<li><p><strong>事业环境因素</strong>（一般是指项目经理不能改变的，分为组织内部和组织外部）：</p>
+<ul>
+<li>组织内部的事业环境因素<ul>
+<li>组织文化、结构和治理</li>
+<li>设施和资源的物理分布</li>
+<li>基础设施</li>
+<li>信息技术软件</li>
+<li>资源可用性</li>
+<li>员工能力</li>
+</ul>
+</li>
+<li>组织外部的事业环境因素<ul>
+<li>市场条件</li>
+<li>社会和文化影响因素</li>
+<li>监管环境</li>
+<li>商业数据库</li>
+<li>学术研究</li>
+<li>行业标准</li>
+<li>财务考虑因素</li>
+<li>物理环境因素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>组织过程资产</strong>：</p>
+<ul>
+<li>过程资产</li>
+<li>治理文件</li>
+<li>数据资产</li>
+<li>知识资产</li>
+<li>安保和安全</li>
+</ul>
+</li>
+</ol>
+<h4 id="制定项目章程-工具与技术（需要和干系人确定事情，并达成一致）"><a href="#制定项目章程-工具与技术（需要和干系人确定事情，并达成一致）" class="headerlink" title="制定项目章程-工具与技术（需要和干系人确定事情，并达成一致）"></a>制定项目章程-工具与技术（需要和干系人确定事情，并达成一致）</h4><h6 id="1、专家判断"><a href="#1、专家判断" class="headerlink" title="1、专家判断"></a>1、专家判断</h6><p>行业内的专家，根据自己的项目经验，来帮你做出判断</p>
+<h6 id="2、数据收集"><a href="#2、数据收集" class="headerlink" title="2、数据收集"></a>2、数据收集</h6><ul>
+<li>头脑风暴（俗称拍脑门，用于短时间内获得大量创意，适用于团队环境，需要引导者进行引导）</li>
+<li>焦点小组（召集干系人和主题专家讨论项目风险、成功标准和其它议题，比一对一访谈更有利于与动交流。）</li>
+<li>访谈（通过与干系人直接交谈，了解高层级需求、假设条件、制约因素、审批标准以及其他信息。）</li>
+</ul>
+<h6 id="3、人际关系与团队技能"><a href="#3、人际关系与团队技能" class="headerlink" title="3、人际关系与团队技能"></a>3、人际关系与团队技能</h6><ul>
+<li>冲突管理（有助于干系人就目标、成功标准、高层级需求、项目描述、总体里程碑和其他内容达成一致意见。）</li>
+<li>引导（有效引导团队活动达成决定、解决方案或结论。）</li>
+<li>会议管理（包括准备议程，确保每个关键干系人代表，以及准备和发送后续的会议纪要和行动计划。）</li>
+</ul>
+<h6 id="4、会议（万金油）"><a href="#4、会议（万金油）" class="headerlink" title="4、会议（万金油）"></a>4、会议（万金油）</h6><h4 id="制定项目章程-输出"><a href="#制定项目章程-输出" class="headerlink" title="制定项目章程-输出"></a>制定项目章程-输出</h4><p>制定项目章程，输出2个项目文件，一个是项目章程，一个是假设日志。</p>
+<h6 id="项目章程"><a href="#项目章程" class="headerlink" title="项目章程"></a>项目章程</h6><p>定义：</p>
+<p>项目章程记录了关于项目和项目预期交付的产品、服务或成果的高层级信息。（即宏观层面，所以我们的项目章程不能太抽象，也不能太具体）</p>
+<p>具体内容：</p>
+<ul>
+<li>项目目的</li>
+<li>可测量的项目目标和相关的成功标准</li>
+<li>高层级需求、高层级项目描述、边界定义以及<strong>主要</strong>可交付成果</li>
+<li>整体项目风险</li>
+<li>总体里程碑进度计划</li>
+<li>预先批准的财务资源</li>
+<li>关键干系人名单</li>
+<li>项目审批要求（例如，评价项目成功的标准，由准对项目成功下结论，由准签署项目结束）</li>
+<li>项目退出标准（例如，在何种条件下才能关闭或取消项目或阶段）</li>
+<li>委派的项目经理及其职责和职权</li>
+<li>发起人或其他批准项目章程的人员的姓名和职权等</li>
+</ul>
+<p>作用：</p>
+<p>项目章程确保干系人在总体上就主要可交付成果、里程碑以及每个项目参与者的角色和职责达成共识。</p>
+<h6 id="假设日志"><a href="#假设日志" class="headerlink" title="假设日志"></a>假设日志</h6><p>定义：</p>
+<p>假设日志用于记录整个项目生命周期中的所有假设条件和制约因素。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202310031117786.png" alt="image-20231003111740532"></p>
+<p>高层级：</p>
+<p>在项目启动之前进行可行性研究和论证时，即开始识别高层级的战略和运营假设条件与制约因素，这些假设条件与制约因素应纳入项目章程。</p>
+<p>较低层级：</p>
+<p>较低层级的活动和任务假设条件在项目期间随着诸如定义技术规范、估算、进度和风险等项目活动的开展而生成。</p>
+<h4 id="项目章程示例"><a href="#项目章程示例" class="headerlink" title="项目章程示例"></a>项目章程示例</h4><p>项目名称：CRM软件开发。</p>
+<p>总体里程碑进度表：2009年5月1日开工，2009年11月5日结束。</p>
+<p>项目经理：李某某，电话号码：1234567894</p>
+<p>项目立项依据：公司业务经过了多年的发展，公司已经拥有了大量的优质客户和一大批潜在客户，为了稳定与发展公司的客户群，公司管理层决定开发一个CRM系统。</p>
+<p>项目目标：以标准的客户关系管理理论为指导，结合公司的营销经验，在6个月时间里开发完成具备客户管理、市场管理、销售管理、服务管理、统计分析和Call Center六大功能的CRM客户管理软件。预算为6个月投入为50万人民币。</p>
+<p>项目干系人：</p>
+<ol>
+<li>赵某某：项目发起人和赞助人，负责监督项目；</li>
+<li>李某某：项目经理，负责计划、监控项目，对项目质量负责；</li>
+<li>钱某某：IT部门经理，负责为项目提供适当资源和培训；</li>
+<li>王某某：业务接口人，负责为项同提供业务需求。</li>
+</ol>
+<p>签名：（以上所有干系人签名）</p>
+<h2 id="制定项目管理计划"><a href="#制定项目管理计划" class="headerlink" title="制定项目管理计划"></a>制定项目管理计划</h2><h4 id="制定项目管理计划-1"><a href="#制定项目管理计划-1" class="headerlink" title="制定项目管理计划"></a>制定项目管理计划</h4><p>定义：</p>
+<p>制定项目管理计划是定义、准备和协调项目计划的所有组成部分，并把它们整合为一份综合项目管理计划的过程。</p>
+<p>本过程的主要作用：</p>
+<p>生成一份综合文件，用于确定所有项目工作的基础及其执行方式。</p>
+<p>特点：</p>
+<ul>
+<li>可以是概括或详细（项目管理计划可以是概括或详细的，每个组成部分的详细程度取决于具体项目的要求）</li>
+<li>可以是正式或非正式的（项目管理计划在没有正式批准和产生基准线，是非正式的，但是有了正式批准或生产基准版本后，属于正式文件，修改需走正规变更程序）</li>
+<li>基准化（1、项目计划应基准化，即至少应规定项目的范围、时间和成本方面的基准，以便据此考核项目执行情况和管理项目绩效；2、在确定基准之前，可能要对项目管理计划进行多次更新，且这些更新无需遵循正式的流程；3、但是一旦确认了基准，就只能通过提出变更请求、实施整体变更控制过程进行更新。）</li>
+<li>渐进明细（在项目收尾之前，项目管理计划需要通过不断更新来渐进明细，并且这些更新需要得到控制和批准）</li>
+</ul>
+<h4 id="制定项目管理计划-输入"><a href="#制定项目管理计划-输入" class="headerlink" title="制定项目管理计划-输入"></a>制定项目管理计划-输入</h4><h6 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h6><ul>
+<li>项目章程</li>
+<li>其他知识领域规划过程的输出</li>
+<li>事业环境因素（一般是指项目经理不能改变的，分为组织内部和组织外部）<ul>
+<li>组织内部的事业环境因素<ul>
+<li>组织文化、结构和治理</li>
+<li>设施和资源的物理分布</li>
+<li>基础设施</li>
+<li>信息技术软件</li>
+<li>资源可用性</li>
+<li>员工能力</li>
+</ul>
+</li>
+<li>组织外部的事业环境因素<ul>
+<li>市场条件</li>
+<li>社会和文化影响因素</li>
+<li>监管环境</li>
+<li>商业数据库</li>
+<li>学术研究</li>
+<li>行业标准</li>
+<li>财务考虑因素</li>
+<li>物理环境因素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组织过程资产<ul>
+<li>过程资产</li>
+<li>治理文件</li>
+<li>数据资产</li>
+<li>知识资产</li>
+<li>安保和安全</li>
+</ul>
+</li>
+</ul>
+<h4 id="制定项目管理计划-工具和技术"><a href="#制定项目管理计划-工具和技术" class="headerlink" title="制定项目管理计划-工具和技术"></a>制定项目管理计划-工具和技术</h4><h6 id="1、专家判断-1"><a href="#1、专家判断-1" class="headerlink" title="1、专家判断"></a>1、专家判断</h6><p>行业内的专家，根据自己的项目经验，来帮你做出判断</p>
+<h6 id="2、数据收集-1"><a href="#2、数据收集-1" class="headerlink" title="2、数据收集"></a>2、数据收集</h6><ul>
+<li>头脑风暴（俗称拍脑门，用于短时间内获得大量创意，适用于团队环境，需要引导者进行引导）</li>
+<li>核对单（很多组织基于自身经验指定了标准化的核对单，或者采用所在行业的核对单。核对单可以知道项目经理制定计划或帮助检查项目管理计划是否包含所需的全部信息。）</li>
+<li>焦点小组（召集干系人和主题专家讨论项目风险、成功标准和其它议题，比一对一访谈更有利于与动交流。）</li>
+<li>访谈（通过与干系人直接交谈，了解高层级需求、假设条件、制约因素、审批标准以及其他信息。）</li>
+</ul>
+<h6 id="3、人际关系与团队技能-1"><a href="#3、人际关系与团队技能-1" class="headerlink" title="3、人际关系与团队技能"></a>3、人际关系与团队技能</h6><ul>
+<li>冲突管理（有助于干系人就目标、成功标准、高层级需求、项目描述、总体里程碑和其他内容达成一致意见。）</li>
+<li>引导（有效引导团队活动达成决定、解决方案或结论。）</li>
+<li>会议管理（包括准备议程，确保每个关键干系人代表，以及准备和发送后续的会议纪要和行动计划。）</li>
+</ul>
+<h6 id="4、会议"><a href="#4、会议" class="headerlink" title="4、会议"></a>4、会议</h6><ul>
+<li>开工会议（通常利用项目开工会议来明确项目规划阶段工作的完成并宣布开始项目执行阶段，目的是传达项目目标、获得团队对项目的承诺，以及阐明每个干系人的角色和职责。）</li>
+</ul>
+<h4 id="制定项目管理计划-输出"><a href="#制定项目管理计划-输出" class="headerlink" title="制定项目管理计划-输出"></a>制定项目管理计划-输出</h4><p>项目管理计划</p>
+<h6 id="项目管理计划"><a href="#项目管理计划" class="headerlink" title="项目管理计划"></a>项目管理计划</h6><p>定义：</p>
+<p>项目管理计划是说明项目扏行、监控和收尾方式的一份文件，定整合并综合了所有知识领域子管理计划和基准，以及管理项目所需的其它组件信息，项目管理计划的组件取决于项目的具体需求。</p>
+<p>包含组件：</p>
+<ul>
+<li>子管理计划<ul>
+<li>十大管理计划（范围管理计划、需求管理计划、进度管理计划、质量管理计划、成本管理计划、资源管理计划、沟通管理计划、风险管理计划、采购管理计划、干系人管理计划）</li>
+<li>基准：进度基准、范围基准、成本基准</li>
+<li>其他组件：项目管理计划生成的组件会因项目而异，但是通 常包括：变更管理计划、配置管理计划、绩效测量基准、项目生命周期、开发方法、管理审查。</li>
+</ul>
+</li>
+</ul>
+<h4 id="项目管理计划示例"><a href="#项目管理计划示例" class="headerlink" title="项目管理计划示例"></a>项目管理计划示例</h4><ol>
+<li><p>项目名称</p>
+<p>京华网上花店系统</p>
+</li>
+<li><p>项目背景</p>
+<p>随着互联网技术的飞速发展，互联网已经走进千家万户，“京华”鲜花店为了突破时空限制，降低交易成本，节约客户订购、支付和配送的时间，方便客户购买，决定进入电子商务网上鲜花销售市场，建立一个京华网上销售系统，利用互联网在线支付平台进行交易，实现网络营销与传统营销双通道同时运行的新型鲜花营销模式。</p>
+<p>建设网上花店将得以下几方面的收益：1.网上销售带来的量的增加。预计网站运营起半年内花店收入增长10%，一年半内销售收入增长50%。2.网上销售带来的成本节约。预计鲜花销售成本可减少20%~30%。3.品牌增值带来的收益。网上商店的运作将扩大“京华”的知名度，提升“京华”品牌，最终使“京华”成为北京地区有影响力的鲜花网上销售企业。</p>
+</li>
+<li><p>项目范围管理计划（范围基准）</p>
+<p>京华网上花店系统的总体目标是成为北京地区有影响力的鲜花网上销售企业，这一目标将分三个阶段实现。</p>
+<p>项目的范围定为采用现有的各种网络技术，构建一个鲜花、礼品等商品多级查询、选择、订购的网上销售系统，为客户提供方便、快捷、安全的网上购物环境。</p>
+<p>项目可交付成果包括一个网上购物商城，提供各类管理文档、开发技术文件、系统使用和用户手册，并对人员提供必要的培训。详细的可交付物说明参见WBS文档。</p>
+<p>项目范围管理的方法为：</p>
+<ol>
+<li>范围说明书只有项目经理有权更新和发布。</li>
+<li>范围说明书是制定项目WBS的基础和依据。</li>
+<li>对项目范围说明书的更改或调整可能会引起合同变更，对此要慎重。</li>
+</ol>
+</li>
+<li><p>项目进度管理计划（进度基准）</p>
+<p>项目建设周期约需要6个月。</p>
+</li>
+<li><p>项目成本管理计划（成本基准）</p>
+<p>项目建设预计投入20万元，用于平台搭建、软硬件资源购买、技术支持及管理和人员的费用。成本预算方案见表8-3。</p>
+<p><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308282239736.png" alt="image-20230828223932658"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308282240435.png" alt="image-20230828224026368"></p>
+</li>
+<li><p>质量管理计划</p>
+<p>项目开发过程中，按照公司制定的CMMI三级标准过程来进行。在里程碑会议和周例会上按照公司的软件开发质量检查表、质量评审过程进行质量审查，提出改进措施并及时进行改进。详细的质量检查表、质量检查过程标准参见公司标准。</p>
+</li>
+<li><p>项目人力资源计划</p>
+<p>金某某（项目经理）主要负责经营策略与项目规划</p>
+<p>蒋某某     主要负责网站开发</p>
+<p>邓某某      主要负责网站的制作和维护</p>
+<p>程某某       主要负责市场调查和业务流程设计</p>
+</li>
+<li><p>项目沟通计划</p>
+<p>利用BBS建立一个项目共享区，所有项目干系人都通过这个共享区进行交流与沟通。项目的进展情况通过项目例会和里碑会议进行检查与收集。项目沟通计划可根据项目实际情况进行及时调整。</p>
+</li>
+<li><p>项目风险管理计划（风险登记册）</p>
+<p>项目实施过程中可能遇到的风险及防范措施如下。</p>
+<ul>
+<li><p>技术风险</p>
+<ul>
+<li>黑客攻击或者病毒入侵会导致网站死机或都不能访问，影响网上花店的运作。防范措施是加强病毒和入侵检测，设置好防火墙。</li>
+<li>设备硬件损坏导致网站不能访问或者数据丢失，使花店客户遭受损失。防范措施是做好数据备份以及硬件备份。</li>
+<li>开发方出现问题使开发进度缓慢导致实施进度无法跟上计划。防范措施：一是多方比较慎重选择合作方；二是签订规范合理合同，在出现纠纷时能通过法律途径保护本网站的正当权益。</li>
+</ul>
+</li>
+<li><p>经营风险</p>
+<ul>
+<li>网站宣传推广效果不好，网站访问量少。防范措施是推广网站时应根据企业的自身情况选定合适的搜索引擎注册，并且隔一段时间观察排名情况，总结出哪些搜索引擎能带来的实际效果。注意跟进，积累数据，为了以后的业务开展积累经验，不断改进网站推广方式。还要注意引进结合网下的多种推广方式。</li>
+<li>由于目前企业计算机人才缺乏，对外包单位依赖较大，网站一旦出现问题只能由其解决。防范措施是加强员工两个方面的技术培训，一是要求电子商务员熟悉网站各模块的操作；二是要求网络管理员熟悉网站系统的管理以及网站应用系统的程序。</li>
+<li>若项目运营得比较成功，客户量增大，客户订单增长迅速，花店接纳客户能力（快速供货能力）会受到考验。防范措施是加强与供应商的合作与联系，提高双方的反应能力，避免出现订单积压、供货链断裂的现象。</li>
+</ul>
+</li>
+<li><p>管理风险</p>
+<ul>
+<li>由于业务流的改变，网上花店人员对新的销售流程不熟悉导致花店动作出现混乱。防范措施是加强对花店人员的业务培训，主要是网上业务流程的培训。</li>
+<li>由于有网上与网下两种销售方式，其中的协调可能会出现问题。防范措施是统一协调制定网上网下的营销方案，加强各部门对网上销售业务的培训，以及准备应急方案。</li>
+</ul>
+</li>
+<li><p>市场风险</p>
+<p>可能出现多家竞争对手，使竞争激烈，导致预期销售量减少。防范措施是加强对竞争对手的分析，及时调整经营策略。</p>
+</li>
+</ul>
+</li>
+<li><p>项目采购计划</p>
+<p>项目所需要的硬件和软件的采购计划如下。</p>
+<ul>
+<li>硬件选型方案所需设备如表8-4所示。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308282306491.png" alt="image-20230828230658437"></li>
+<li>正版软件系统费用见表8-5。<img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308282307488.png" alt="image-20230828230711438"></li>
+</ul>
+</li>
+</ol>
+<h2 id="指导与管理项目工作（执行工作）"><a href="#指导与管理项目工作（执行工作）" class="headerlink" title="指导与管理项目工作（执行工作）"></a>指导与管理项目工作（执行工作）</h2><h4 id="指导与管理项目工作"><a href="#指导与管理项目工作" class="headerlink" title="指导与管理项目工作"></a>指导与管理项目工作</h4><p>定义：</p>
+<p>指导与管理项目工作是为实现项目目标而领导和执行管理计划中所需确定的工作，并实施已批准变更的过程。</p>
+<p>本过程的主要作用：</p>
+<p>是对项目工作和可交付成果开发综合管理，以提高项目成功的可能性。</p>
+<p>开展频率：</p>
+<p>本过程需要在整个项目期间开展。</p>
+<p>实施已批准的变更：</p>
+<p>包括：</p>
+<ul>
+<li>纠正措施（目前的工作和进度已经出现在偏差，我们对他进行掰回正轨的措施）</li>
+<li>预防措施（担心未来的工作出现偏差，提前进行的措施）</li>
+<li>缺陷补救措施（在项目过程中，产品或功能出现BUG，对这些进行的措施。）</li>
+</ul>
+<h4 id="指导与管理项目工作-输入"><a href="#指导与管理项目工作-输入" class="headerlink" title="指导与管理项目工作-输入"></a>指导与管理项目工作-输入</h4><h6 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h6><ol>
+<li>项目管理计划</li>
+<li>项目文件</li>
+<li>批准的变更请求<ol>
+<li>定义：是实施整体变更控制过程的输出，包括经项目经理审查和批准的变更请求，必要时需要经变更控制委员会审查和批准。</li>
+<li>CCB：定义：CCB是项目的所有都权益代表，负责对变更进行决策。</li>
+<li>成员：CCB由项目所涉及的主要干系人共同组成，通常包括用户和项目所在组织管理层的决策人员。</li>
+<li>职责：CCB是决策机构，不是作业机构；通常CCB的工作是通过评审手段来决定项目基准是否需要变更，但不提出变更方案。</li>
+</ol>
+</li>
+<li>事业环境因素（一般是指项目经理不能改变的，分为组织内部和组织外部）<ul>
+<li>组织内部的事业环境因素<ul>
+<li>组织文化、结构和治理</li>
+<li>设施和资源的物理分布</li>
+<li>基础设施</li>
+<li>信息技术软件</li>
+<li>资源可用性</li>
+<li>员工能力</li>
+</ul>
+</li>
+<li>组织外部的事业环境因素<ul>
+<li>市场条件</li>
+<li>社会和文化影响因素</li>
+<li>监管环境</li>
+<li>商业数据库</li>
+<li>学术研究</li>
+<li>行业标准</li>
+<li>财务考虑因素</li>
+<li>物理环境因素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组织过程资产<ul>
+<li>过程资产</li>
+<li>治理文件</li>
+<li>数据资产</li>
+<li>知识资产</li>
+<li>安保和安全</li>
+</ul>
+</li>
+</ol>
+<h4 id="指过与管理项目工作-工具与技术"><a href="#指过与管理项目工作-工具与技术" class="headerlink" title="指过与管理项目工作-工具与技术"></a>指过与管理项目工作-工具与技术</h4><ol>
+<li><p>专家判断</p>
+<p>行业内的专家，根据自己的项目经验，来帮你做出判断</p>
+</li>
+<li><p>项目管理信息系统（万金油）</p>
+<p>项目管理信息系统给项目提供了IT软件工具，例如进度计划工具、工具授权系统、配置管理系统、信息收集与发布系统、以及进入其他在线信息系统（如知识库）的登录界面，支持自动收集和报告关键绩效指标（KPI）。</p>
+<p>可以是正式的，也可以是非正式的。</p>
+</li>
+<li><p>会议（万金油）</p>
+</li>
+</ol>
+<h4 id="指导与管理项目工作-输出"><a href="#指导与管理项目工作-输出" class="headerlink" title="指导与管理项目工作-输出"></a>指导与管理项目工作-输出</h4><ol>
+<li><h6 id="可交付成果"><a href="#可交付成果" class="headerlink" title="可交付成果"></a>可交付成果</h6><ul>
+<li>可交付成果是在某一过程、阶段或项目完成时，必须产出的任何独特并可核实的产品、成果或服务能力。</li>
+<li>一旦完成了可交付成果的第一个版本，就应该执行变更控制。配置管理工具和程序来支持对可交付成果（如文件、软件和构件）的多个版本的控制。</li>
+</ul>
+</li>
+<li><h6 id="工作绩效数据"><a href="#工作绩效数据" class="headerlink" title="工作绩效数据"></a>工作绩效数据</h6><ul>
+<li>工作绩效数据是在执行项目工作的过程中，从每个正在执行的活动中收集到的原始观察结果和测量值。</li>
+<li>数据通常在最低层次的细节，将交由其他过程从中提炼并形成信息。</li>
+</ul>
+</li>
+<li><h6 id="问题日志"><a href="#问题日志" class="headerlink" title="问题日志"></a>问题日志</h6><ul>
+<li>在整个项目生命周期中，项目经理通常会遇到问题、差距、不一致或意外冲突。</li>
+<li>主要内容：1问题类型2问题提出者和提出时间3问题描述4问题优先级5解决问题负责人6目标解决日期7问题状态8最终解决情况等</li>
+<li>创建时间：作为指导与管理项目工作的输出，问题日志被首次创建，尽管在项目期间任何时候都可能发生问题。</li>
+</ul>
+</li>
+<li><h6 id="变更请求"><a href="#变更请求" class="headerlink" title="变更请求"></a>变更请求</h6><p>定义：</p>
+<p>变更请求是关于修改任何文件、可交付成果或基准的正式提议。</p>
+<p>提出人：</p>
+<p>任何项目干系人都可以提出变更请求，应该通过实施整体变更控制过程对变更请求进行审查和处理。</p>
+<p>包括：</p>
+<ul>
+<li>纠正措施（为使项目工作绩效重新与项目管理计划一致，而进行的有目的的活动）</li>
+<li>预防措施（为确保项目工作未来绩效符合项目管理计划，而进行的有目的的活动）</li>
+<li>缺陷补救（为了修正不一致产品或产品组件，而进行的有目的的活动）</li>
+<li>更新（对正式受控的项目文件或计划进行变更，以反应修改、增加的意见或内容）</li>
+</ul>
+</li>
+<li><h6 id="项目管理计划（更新）"><a href="#项目管理计划（更新）" class="headerlink" title="项目管理计划（更新）"></a>项目管理计划（更新）</h6></li>
+<li><h6 id="项目文件（更新）"><a href="#项目文件（更新）" class="headerlink" title="项目文件（更新）"></a>项目文件（更新）</h6></li>
+<li><h6 id="组织过程资产（更新）"><a href="#组织过程资产（更新）" class="headerlink" title="组织过程资产（更新）"></a>组织过程资产（更新）</h6></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/">http://example.com/2023/08/29/11.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">汤圆小记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86%E5%B0%8F%E7%BB%93/">知识小结</a></div><div class="post-share"><div class="social-share" data-image="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124740.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>支持一下</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/09/03/12.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8B/" title="项目整合管理-下集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124707.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">项目整合管理-下集</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%9A%84%E8%83%BD%E5%8A%9B/" title="项目经理的能力"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124690.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">项目经理的能力</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/10/06/00.%E8%80%83%E5%89%8D%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/" title="必备知识"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124670.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-06</div><div class="info-item-2">必备知识</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/08/27/10.%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9%E7%AE%A1%E7%90%86/" title="项目立项管理"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124693.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-27</div><div class="info-item-2">项目立项管理</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/03/12.%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86-%E4%B8%8B/" title="项目整合管理-下集"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124707.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-03</div><div class="info-item-2">项目整合管理-下集</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/07/13.%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="范围管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042122192.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-07</div><div class="info-item-2">范围管理计划</div></div><div class="info-2"><div class="info-item-1"> 范围管理定义：项目范围管理：包括确保项目做且只做所需的全部工作，以成功完成项目。 项目范围管理主要在意定义和控制那些工作应该包括在项目内，那些不应该包含在项目内。 范围管理的基础： 产品范围和项目范围 产品范围 指某项产品、服务或成果所具有的特征和功能。 衡量是否完成，根据产品需求来衡量的。产品需求规格说明书。   项目范围 包括产品范围，是为交付具有规定特征与功能的产品、服务或成果而必须完成的工作。 衡量是否完成，根据项目管理计划来衡量的。     管理新实践  项目范围管理过程 过程概述，6个过程-...</div></div></div></a><a class="pagination-related" href="/2023/09/08/14.%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" title="进度管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124678.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-08</div><div class="info-item-2">进度管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/2023/09/09/15.%E9%A1%B9%E7%9B%AE%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" title="项目成本管理计划"><img class="cover" src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124728.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-09</div><div class="info-item-2">项目成本管理计划</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">汤圆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">项目整合管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80"><span class="toc-number">1.0.1.</span> <span class="toc-text">管理基础</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">整合管理的复杂性</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92%E5%92%8C%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">项目管理计划和项目文件</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">项目整合管理过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="toc-number">2.0.1.</span> <span class="toc-text">过程概述</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#7%E4%B8%AA%E8%BF%87%E7%A8%8B"><span class="toc-number">2.0.1.0.1.</span> <span class="toc-text">7个过程</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">制定项目章程</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">3.0.0.0.1.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%9C%AC%E8%BF%87%E7%A8%8B%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">3.0.0.0.2.</span> <span class="toc-text">本过程的作用：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%BC%80%E5%B1%95%E9%A2%91%E7%8E%87"><span class="toc-number">3.0.0.0.3.</span> <span class="toc-text">开展频率</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%8E%E9%9C%80%E6%B1%82%E4%B9%8B%E9%97%B4%E5%BB%BA%E7%AB%8B"><span class="toc-number">3.0.0.0.4.</span> <span class="toc-text">与需求之间建立</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%8E%E5%90%88%E5%90%8C%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.0.0.0.5.</span> <span class="toc-text">与合同的区别</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%BA%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E6%8E%88%E6%9D%83"><span class="toc-number">3.0.0.0.6.</span> <span class="toc-text">为项目经理授权</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%BC%96%E5%88%B6%E4%BA%BA"><span class="toc-number">3.0.0.0.7.</span> <span class="toc-text">编制人</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E6%A0%87%E5%BF%97"><span class="toc-number">3.0.0.0.8.</span> <span class="toc-text">重要标志</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E4%BA%BA"><span class="toc-number">3.0.0.0.9.</span> <span class="toc-text">项目启动人</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B-%E8%BE%93%E5%85%A5"><span class="toc-number">3.0.1.</span> <span class="toc-text">制定项目章程-输入</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%8C%85%E6%8B%AC%EF%BC%9A"><span class="toc-number">3.0.1.0.1.</span> <span class="toc-text">输入包括：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E9%9C%80%E8%A6%81%E5%92%8C%E5%B9%B2%E7%B3%BB%E4%BA%BA%E7%A1%AE%E5%AE%9A%E4%BA%8B%E6%83%85%EF%BC%8C%E5%B9%B6%E8%BE%BE%E6%88%90%E4%B8%80%E8%87%B4%EF%BC%89"><span class="toc-number">3.0.2.</span> <span class="toc-text">制定项目章程-工具与技术（需要和干系人确定事情，并达成一致）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1%E3%80%81%E4%B8%93%E5%AE%B6%E5%88%A4%E6%96%AD"><span class="toc-number">3.0.2.0.1.</span> <span class="toc-text">1、专家判断</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2%E3%80%81%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86"><span class="toc-number">3.0.2.0.2.</span> <span class="toc-text">2、数据收集</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3%E3%80%81%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%9B%A2%E9%98%9F%E6%8A%80%E8%83%BD"><span class="toc-number">3.0.2.0.3.</span> <span class="toc-text">3、人际关系与团队技能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4%E3%80%81%E4%BC%9A%E8%AE%AE%EF%BC%88%E4%B8%87%E9%87%91%E6%B2%B9%EF%BC%89"><span class="toc-number">3.0.2.0.4.</span> <span class="toc-text">4、会议（万金油）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B-%E8%BE%93%E5%87%BA"><span class="toc-number">3.0.3.</span> <span class="toc-text">制定项目章程-输出</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B"><span class="toc-number">3.0.3.0.1.</span> <span class="toc-text">项目章程</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E6%97%A5%E5%BF%97"><span class="toc-number">3.0.3.0.2.</span> <span class="toc-text">假设日志</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.0.4.</span> <span class="toc-text">项目章程示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92"><span class="toc-number">4.</span> <span class="toc-text">制定项目管理计划</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">制定项目管理计划</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92-%E8%BE%93%E5%85%A5"><span class="toc-number">4.0.2.</span> <span class="toc-text">制定项目管理计划-输入</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">4.0.2.0.1.</span> <span class="toc-text">输入</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92-%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%80%E6%9C%AF"><span class="toc-number">4.0.3.</span> <span class="toc-text">制定项目管理计划-工具和技术</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1%E3%80%81%E4%B8%93%E5%AE%B6%E5%88%A4%E6%96%AD-1"><span class="toc-number">4.0.3.0.1.</span> <span class="toc-text">1、专家判断</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2%E3%80%81%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86-1"><span class="toc-number">4.0.3.0.2.</span> <span class="toc-text">2、数据收集</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3%E3%80%81%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%9B%A2%E9%98%9F%E6%8A%80%E8%83%BD-1"><span class="toc-number">4.0.3.0.3.</span> <span class="toc-text">3、人际关系与团队技能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4%E3%80%81%E4%BC%9A%E8%AE%AE"><span class="toc-number">4.0.3.0.4.</span> <span class="toc-text">4、会议</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92-%E8%BE%93%E5%87%BA"><span class="toc-number">4.0.4.</span> <span class="toc-text">制定项目管理计划-输出</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92"><span class="toc-number">4.0.4.0.1.</span> <span class="toc-text">项目管理计划</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.0.5.</span> <span class="toc-text">项目管理计划示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C%EF%BC%88%E6%89%A7%E8%A1%8C%E5%B7%A5%E4%BD%9C%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">指导与管理项目工作（执行工作）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C"><span class="toc-number">5.0.1.</span> <span class="toc-text">指导与管理项目工作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C-%E8%BE%93%E5%85%A5"><span class="toc-number">5.0.2.</span> <span class="toc-text">指导与管理项目工作-输入</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%BE%93%E5%85%A5-1"><span class="toc-number">5.0.2.0.1.</span> <span class="toc-text">输入</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E8%BF%87%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C-%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-number">5.0.3.</span> <span class="toc-text">指过与管理项目工作-工具与技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C-%E8%BE%93%E5%87%BA"><span class="toc-number">5.0.4.</span> <span class="toc-text">指导与管理项目工作-输出</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8F%AF%E4%BA%A4%E4%BB%98%E6%88%90%E6%9E%9C"><span class="toc-number">5.0.4.0.1.</span> <span class="toc-text">可交付成果</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E7%BB%A9%E6%95%88%E6%95%B0%E6%8D%AE"><span class="toc-number">5.0.4.0.2.</span> <span class="toc-text">工作绩效数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%97%A5%E5%BF%97"><span class="toc-number">5.0.4.0.3.</span> <span class="toc-text">问题日志</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E8%AF%B7%E6%B1%82"><span class="toc-number">5.0.4.0.4.</span> <span class="toc-text">变更请求</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92%EF%BC%88%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="toc-number">5.0.4.0.5.</span> <span class="toc-text">项目管理计划（更新）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%EF%BC%88%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="toc-number">5.0.4.0.6.</span> <span class="toc-text">项目文件（更新）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%BB%84%E7%BB%87%E8%BF%87%E7%A8%8B%E8%B5%84%E4%BA%A7%EF%BC%88%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="toc-number">5.0.4.0.7.</span> <span class="toc-text">组织过程资产（更新）</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/22/hello-world/" title="Hello World"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124687.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/11/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-11-22T04:36:09.099Z" title="发表于 2024-11-22 12:36:09">2024-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124736.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="群晖Docker套件-CentOS"/></a><div class="content"><a class="title" href="/2024/11/12/%E7%BE%A4%E6%99%96Docker%E5%A5%97%E4%BB%B6-CentOS/" title="群晖Docker套件-CentOS">群晖Docker套件-CentOS</a><time datetime="2024-11-12T06:30:37.000Z" title="发表于 2024-11-12 14:30:37">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124703.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题美化历程"/></a><div class="content"><a class="title" href="/2024/11/10/hexo%E7%BE%8E%E5%8C%96%E8%BF%87%E7%A8%8Bfluid/" title="hexo主题美化历程">hexo主题美化历程</a><time datetime="2024-11-10T08:38:41.000Z" title="发表于 2024-11-10 16:38:41">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124752.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora 1.7.4 版本激活步骤"/></a><div class="content"><a class="title" href="/2024/01/19/Typora%201.7.4%20%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4/" title="Typora 1.7.4 版本激活步骤">Typora 1.7.4 版本激活步骤</a><time datetime="2024-01-19T08:55:06.000Z" title="发表于 2024-01-19 16:55:06">2024-01-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单"><img src="https://lxiangsheng-pic.oss-cn-hangzhou.aliyuncs.com/img/202308042124704.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期店铺存在乱判的订单"/></a><div class="content"><a class="title" href="/2023/10/21/%E8%BF%91%E6%9C%9F%E5%BA%97%E9%93%BA%E5%AD%98%E5%9C%A8%E4%B9%B1%E5%88%A4%E7%9A%84%E8%AE%A2%E5%8D%95/" title="近期店铺存在乱判的订单">近期店铺存在乱判的订单</a><time datetime="2023-10-21T09:00:40.000Z" title="发表于 2023-10-21 17:00:40">2023-10-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By 汤圆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
+  }
+
+  const panguInit = () => {
+    if (false){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
